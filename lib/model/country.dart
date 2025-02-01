@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:career_map/constant.dart';
 
 class Country {
-  final String name; // Mandatory country name and code
-  final String code;
+  final String name; // Mandatory country name
+  final String path;
 
   // Dark-grey by default
-  Color color = unknown; // Will be used to color the country on the map based on job compatibility
+  Color color = standard; // Will be used to color the country on the map based on job compatibility
 
   String medianSalary = 'N/A'; // Will be used to display the median salary of the country
   String salaryPeriod = 'N/A'; // Will be used to display the salary period of the country
@@ -14,7 +14,7 @@ class Country {
 
   String dataConfidence = 'low'; // Indicates how much confidence we have in the data
 
-  Country({required this.name, required this.code, medianSalary, salaryPeriod, currency});
+  Country({required this.name, required this.path, medianSalary, salaryPeriod, currency});
 
   void setMedianSalary(String ms) {
     medianSalary = ms;
