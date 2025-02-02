@@ -1,4 +1,3 @@
-import 'package:career_map/APIs/currency.dart';
 import 'package:career_map/APIs/job_salary_data.dart';
 import 'package:career_map/constant.dart';
 import 'package:career_map/firebase/firestore_methods.dart';
@@ -109,21 +108,20 @@ class _MapState extends State<Map> {
                   ),
                 ),
                 ElevatedButton(
-                  onPressed: () async { 
+                  onPressed: () async {
+                    Set<String> names = {}; 
                     for (var country in countries) {
                       country.color = unknown;
                     }
                     bool? isDataValid = await firestoreMethods.salaryDataIsUpToDate(searchText.toLowerCase().replaceAll(' ', ''));
                     if (isDataValid == false) {
-                      List<String> names = [];
                       int i = 0; // keeps track of how many requests have been made
                       await firestoreMethods.createJobSalaryApiDataToFirestore(DateTime.now().toUtc(), 'salary_api', searchText.toLowerCase().replaceAll(' ', ''));
                       for (var country in countries) {
-                        var jobSalaryDataFuture = JobSalaryApi().loadData(country.name, searchText); // Get the job salary data
-                        if (names.contains(country.name.toLowerCase())) {
+                        if (!names.add(country.name.toLowerCase().trim())) { // If the country has already been queried to salaryDataApi, skip it
                           continue;
                         }
-                        names.add(country.name.toLowerCase());
+                        var jobSalaryDataFuture = JobSalaryApi().loadData(country.name, searchText); // Get the job salary data
                         var jobSalaryData = await jobSalaryDataFuture;
                         if (jobSalaryData == null) {
                           continue;
