@@ -20,8 +20,8 @@ class FirestoreMethods {
     }
   }
 
-  // Method to write JSON data to Firestore from API response
-  Future<void> writeApiDataToFirestore(
+  // Method to write Currency API JSON data to Firestore from API response
+  Future<void> writeCurrencyApiDataToFirestore(
   Future<dynamic> apiDataFuture, 
   String nameOfCollection, 
   String namingAttribute,
@@ -37,6 +37,37 @@ class FirestoreMethods {
         await collectionRef.doc(item.value['code']).set({'value': item.value['value']});
         await collectionRef.doc(item.value['code']).update({'last-modified': DateTime.now().toUtc()});
       }
+      print('Data written for ${apiData[namingAttribute]}');
+    } else {
+      print('Unexpected data format. Expected a JSON object.');
+    }
+  } catch (e) {
+    print('Error processing API data: $e');
+  }
+}
+
+ // Method to write Job Salary API JSON data to Firestore from API response
+  Future<void> writeJobSalaryApiDataToFirestore(
+  Future<dynamic> apiDataFuture, 
+  String nameOfCollection, 
+  String namingAttribute,
+) async {
+  try {
+    // Await the API response
+    final dynamic apiData = await apiDataFuture;
+    
+    if (apiData != false) {
+      final CollectionReference collectionRef = _firestore.collection(nameOfCollection);
+      await collectionRef.doc(apiData[namingAttribute]).set({
+        '${apiData['location']}': 
+          {
+            'median_salary': apiData['median_salary'],
+            'salary_period': apiData['salary_period'],
+            'salary_currency': apiData['salary_currency'],
+            'confidence': apiData['confidence'],
+          }
+        });
+      await collectionRef.doc(apiData[namingAttribute]).update({'last-modified': DateTime.now().toUtc()});
       print('Data written for ${apiData[namingAttribute]}');
     } else {
       print('Unexpected data format. Expected a JSON object.');

@@ -110,6 +110,7 @@ class _MapState extends State<Map> {
                 ),
                 ElevatedButton(
                   onPressed: () async { 
+                      await firestoreMethods.writeJobSalaryApiDataToFirestore(JobSalaryApi().loadData('canada', 'software engineer'), 'salary_api', 'job_title');
                     },
                   child: Text('Search'),
                 ),

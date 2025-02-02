@@ -24,45 +24,22 @@ class Country {
     //_calculateColor();
   }
 
-  void setMedianSalary(double ms) {
-    medianSalary = ms;
-    calculateColor();
-  }
-  void setSalaryPeriod(String sp) {
-    salaryPeriod = sp;
-    calculateColor();
-  }
-  void setCurrency(String c) {
-    currency = c;
-    calculateColor();
-  }
-  void setConfidence(String c) {
-    dataConfidence = c;
-  }
-  void setIncomeGroup(String ig) {
-    incomeGroup = ig;
-    calculateColor();
-  }
-  void setPPI(double p) {
-    ppi = p;
-    calculateColor();
-  }
-  void setUnemploymentRate(double ur) {
-    unemploymentRate = ur;
-    calculateColor();
-  }
-
   Future calculateColor() async {
     FirestoreMethods firestoreMethods = FirestoreMethods();
     int point = 0; // Will be used to calculate the color of the country
-
     
-    firestoreMethods.readDocumentFromFirestore('ppi', name).then((value) {
+      // Get Income group, PPI, Unemployment rate
+    await firestoreMethods.readDocumentFromFirestore('income_group', name).then((value) {
+      if (value != null) {
+        incomeGroup = value['income_group'];
+      }
+    });
+    await firestoreMethods.readDocumentFromFirestore('ppi', name).then((value) {
       if (value != null) {
         ppi = value['purchasing_power'];
       }
     });
-    firestoreMethods.readDocumentFromFirestore('unemployment', name).then((value) {
+    await firestoreMethods.readDocumentFromFirestore('unemployment', name).then((value) {
       if (value != null) {
         unemploymentRate = value['unemployment'];
       }
@@ -81,6 +58,9 @@ class Country {
     //firestoreMethods
 
     // Compute ratio to determine safety of salary
+
+    // Add main points (Salary, GDP)
+      // Salary
 
     // Add side points (PPI, Income group, Unemployment rate)
       // Income group
