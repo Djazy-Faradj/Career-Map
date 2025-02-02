@@ -1,10 +1,11 @@
 import 'dart:convert';
+import 'package:career_map/APIs/api_service.dart';
 import 'package:career_map/firebase/firestore_methods.dart';
 import 'package:http/http.dart' as http;
 
 class CurrencyApi {
   // Credentials for the job salary data API
-  final String _API_KEY = 'cur_live_zKKLDqkN5oWqIdl27lE3Cb2q4CDMIcrIT8ErX0Gr';
+  final String _API_KEY = ApiService().currencyApiKey;
 
   Future<dynamic> loadData() async { // Parameters require a country and a job title to look for
     FirestoreMethods firestoreMethods = FirestoreMethods();

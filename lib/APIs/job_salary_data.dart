@@ -1,9 +1,10 @@
 import 'dart:convert';
+import 'package:career_map/APIs/api_service.dart';
 import 'package:http/http.dart' as http;
 
 class JobSalaryApi {
   // Credentials for the job salary data API
-  final String _API_KEY = 'b5a76c3ea2msh89978e7ee9c068fp14ae42jsn4039dd39e680';
+  final String _API_KEY = ApiService().jobSalaryApiKey;
   final String _API_HOST = 'job-salary-data.p.rapidapi.com';
 
   Future<Map<String, dynamic>?> loadData(String country, String jobTitle) async { // Parameters require a country and a job title to look for

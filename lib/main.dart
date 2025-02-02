@@ -1,3 +1,4 @@
+import 'package:career_map/APIs/api_service.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -10,7 +11,7 @@ void main() async {
   
   if(kIsWeb) {
     await Firebase.initializeApp(options: FirebaseOptions(
-      apiKey: "AIzaSyB95XvyXnF9ixkICBZagjfM5D4XVycLsjc",
+      apiKey: ApiService().firebaseApiKey,
       authDomain: "career-map-496ae.firebaseapp.com",
       projectId: "career-map-496ae",
       storageBucket: "career-map-496ae.firebasestorage.app",
