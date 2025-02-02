@@ -1,4 +1,4 @@
-# **Global Exploration Platform for Students**
+# **Career Map - Global Exploration Platform for Students**
 
 ## **Overview**
 This project is a personalized global exploration platform designed to help students and young professionals identify the best destinations for their goals, preferences, and budget. By analyzing key economic, lifestyle, and affordability metrics, the platform provides tailored recommendations to empower users to confidently explore the world.
@@ -43,6 +43,36 @@ This project is a personalized global exploration platform designed to help stud
 - **Insights**:
   - Access detailed information about each destination’s economic and lifestyle factors.
 
+---
+
+## **How to Try/Install**
+
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/Djazy-Faradj/career-map
+   ```
+2. **Navigate to the Project Directory**:
+   ```bash
+   cd your-project-directory
+   ```
+3. **Install Dependencies**:
+   Ensure you have Flutter installed on your system. Then, run:
+   ```bash
+   flutter pub get
+   ```
+4. **Set Up Firebase**:
+   - Create a Firebase project and link a Firestore database.
+6. **API Keys**:
+   - Obtain API keys for any external data sources used (e.g., economic data APIs).
+   - Add these keys to your environment configuration or directly in the code as specified  
+5. **Run the App**:
+   Use the following command to start the application:
+   ```bash
+   flutter run
+   ```.
+7. **Explore**:
+   Interact with the app to receive personalized recommendations for global destinations based on your preferences and economic data.
+   
 ---
 
 ## **Future Enhancements**
