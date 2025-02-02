@@ -1,9 +1,11 @@
+import 'package:career_map/APIs/currency.dart';
+import 'package:career_map/APIs/job_salary_data.dart';
 import 'package:career_map/constant.dart';
+import 'package:career_map/firebase/firestore_methods.dart';
 import 'package:career_map/model/country.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:live_currency_rate/live_currency_rate.dart';
 import 'package:path_drawing/path_drawing.dart';
 import 'package:xml/xml.dart';
 
@@ -20,6 +22,8 @@ class _MapState extends State<Map> {
   List<Country> countries = [];
   Rect svgBounds = Rect.zero;
   final TransformationController _transformationController = TransformationController();
+
+  FirestoreMethods firestoreMethods = FirestoreMethods();
 
   @override
   void initState() {
@@ -106,7 +110,7 @@ class _MapState extends State<Map> {
                 ),
                 ElevatedButton(
                   onPressed: () async { 
-                    print('boom');},
+                    print(await JobSalaryApi().loadData('canada', 'software engineer'));},
                   child: Text('Search'),
                 ),
               ],

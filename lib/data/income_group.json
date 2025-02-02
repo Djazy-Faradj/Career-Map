@@ -1,1066 +1,1066 @@
 [
   {
-    "name": "Afghanistan",
+    "country": "Afghanistan",
     "income_group": "Low income"
   },
   {
-    "name": "Africa Eastern and Southern",
+    "country": "Africa Eastern and Southern",
     "income_group": ""
   },
   {
-    "name": "Africa Western and Central",
+    "country": "Africa Western and Central",
     "income_group": ""
   },
   {
-    "name": "Albania",
+    "country": "Albania",
     "income_group": "Upper middle income"
   },
   {
-    "name": "Algeria",
+    "country": "Algeria",
     "income_group": "Upper middle income"
   },
   {
-    "name": "American Samoa",
+    "country": "American Samoa",
     "income_group": "High income"
   },
   {
-    "name": "Andorra",
+    "country": "Andorra",
     "income_group": "High income"
   },
   {
-    "name": "Angola",
+    "country": "Angola",
     "income_group": "Lower middle income"
   },
   {
-    "name": "Antigua and Barbuda",
+    "country": "Antigua and Barbuda",
     "income_group": "High income"
   },
   {
-    "name": "Arab World",
+    "country": "Arab World",
     "income_group": ""
   },
   {
-    "name": "Argentina",
+    "country": "Argentina",
     "income_group": "Upper middle income"
   },
   {
-    "name": "Armenia",
+    "country": "Armenia",
     "income_group": "Upper middle income"
   },
   {
-    "name": "Aruba",
+    "country": "Aruba",
     "income_group": "High income"
   },
   {
-    "name": "Australia",
+    "country": "Australia",
     "income_group": "High income"
   },
   {
-    "name": "Austria",
+    "country": "Austria",
     "income_group": "High income"
   },
   {
-    "name": "Azerbaijan",
+    "country": "Azerbaijan",
     "income_group": "Upper middle income"
   },
   {
-    "name": "Bahamas, The",
+    "country": "Bahamas, The",
     "income_group": "High income"
   },
   {
-    "name": "Bahrain",
+    "country": "Bahrain",
     "income_group": "High income"
   },
   {
-    "name": "Bangladesh",
+    "country": "Bangladesh",
     "income_group": "Lower middle income"
   },
   {
-    "name": "Barbados",
+    "country": "Barbados",
     "income_group": "High income"
   },
   {
-    "name": "Belarus",
+    "country": "Belarus",
     "income_group": "Upper middle income"
   },
   {
-    "name": "Belgium",
+    "country": "Belgium",
     "income_group": "High income"
   },
   {
-    "name": "Belize",
+    "country": "Belize",
     "income_group": "Upper middle income"
   },
   {
-    "name": "Benin",
+    "country": "Benin",
     "income_group": "Lower middle income"
   },
   {
-    "name": "Bermuda",
+    "country": "Bermuda",
     "income_group": "High income"
   },
   {
-    "name": "Bhutan",
+    "country": "Bhutan",
     "income_group": "Lower middle income"
   },
   {
-    "name": "Bolivia",
+    "country": "Bolivia",
     "income_group": "Lower middle income"
   },
   {
-    "name": "Bosnia and Herzegovina",
+    "country": "Bosnia and Herzegovina",
     "income_group": "Upper middle income"
   },
   {
-    "name": "Botswana",
+    "country": "Botswana",
     "income_group": "Upper middle income"
   },
   {
-    "name": "Brazil",
+    "country": "Brazil",
     "income_group": "Upper middle income"
   },
   {
-    "name": "British Virgin Islands",
+    "country": "British Virgin Islands",
     "income_group": "High income"
   },
   {
-    "name": "Brunei Darussalam",
+    "country": "Brunei Darussalam",
     "income_group": "High income"
   },
   {
-    "name": "Bulgaria",
+    "country": "Bulgaria",
     "income_group": "High income"
   },
   {
-    "name": "Burkina Faso",
+    "country": "Burkina Faso",
     "income_group": "Low income"
   },
   {
-    "name": "Burundi",
+    "country": "Burundi",
     "income_group": "Low income"
   },
   {
-    "name": "Cabo Verde",
+    "country": "Cabo Verde",
     "income_group": "Lower middle income"
   },
   {
-    "name": "Cambodia",
+    "country": "Cambodia",
     "income_group": "Lower middle income"
   },
   {
-    "name": "Cameroon",
+    "country": "Cameroon",
     "income_group": "Lower middle income"
   },
   {
-    "name": "Canada",
+    "country": "Canada",
     "income_group": "High income"
   },
   {
-    "name": "Caribbean small states",
+    "country": "Caribbean small states",
     "income_group": ""
   },
   {
-    "name": "Cayman Islands",
+    "country": "Cayman Islands",
     "income_group": "High income"
   },
   {
-    "name": "Central African Republic",
+    "country": "Central African Republic",
     "income_group": "Low income"
   },
   {
-    "name": "Central Europe and the Baltics",
+    "country": "Central Europe and the Baltics",
     "income_group": ""
   },
   {
-    "name": "Chad",
+    "country": "Chad",
     "income_group": "Low income"
   },
   {
-    "name": "Channel Islands",
+    "country": "Channel Islands",
     "income_group": "High income"
   },
   {
-    "name": "Chile",
+    "country": "Chile",
     "income_group": "High income"
   },
   {
-    "name": "China",
+    "country": "China",
     "income_group": "Upper middle income"
   },
   {
-    "name": "Colombia",
+    "country": "Colombia",
     "income_group": "Upper middle income"
   },
   {
-    "name": "Comoros",
+    "country": "Comoros",
     "income_group": "Lower middle income"
   },
   {
-    "name": "Congo, Dem. Rep.",
+    "country": "Congo, Dem. Rep.",
     "income_group": "Low income"
   },
   {
-    "name": "Congo, Rep.",
+    "country": "Congo, Rep.",
     "income_group": "Lower middle income"
   },
   {
-    "name": "Costa Rica",
+    "country": "Costa Rica",
     "income_group": "Upper middle income"
   },
   {
-    "name": "Croatia",
+    "country": "Croatia",
     "income_group": "High income"
   },
   {
-    "name": "Cuba",
+    "country": "Cuba",
     "income_group": "Upper middle income"
   },
   {
-    "name": "Curaçao",
+    "country": "Curaçao",
     "income_group": "High income"
   },
   {
-    "name": "Cyprus",
+    "country": "Cyprus",
     "income_group": "High income"
   },
   {
-    "name": "Czechia",
+    "country": "Czechia",
     "income_group": "High income"
   },
   {
-    "name": "Côte d'Ivoire",
+    "country": "Côte d'Ivoire",
     "income_group": "Lower middle income"
   },
   {
-    "name": "Denmark",
+    "country": "Denmark",
     "income_group": "High income"
   },
   {
-    "name": "Djibouti",
+    "country": "Djibouti",
     "income_group": "Lower middle income"
   },
   {
-    "name": "Dominica",
+    "country": "Dominica",
     "income_group": "Upper middle income"
   },
   {
-    "name": "Dominican Republic",
+    "country": "Dominican Republic",
     "income_group": "Upper middle income"
   },
   {
-    "name": "Early-demographic dividend",
+    "country": "Early-demographic dividend",
     "income_group": ""
   },
   {
-    "name": "East Asia & Pacific",
+    "country": "East Asia & Pacific",
     "income_group": ""
   },
   {
-    "name": "East Asia & Pacific (excluding high income)",
+    "country": "East Asia & Pacific (excluding high income)",
     "income_group": ""
   },
   {
-    "name": "East Asia & Pacific (IDA & IBRD)",
+    "country": "East Asia & Pacific (IDA & IBRD)",
     "income_group": ""
   },
   {
-    "name": "Ecuador",
+    "country": "Ecuador",
     "income_group": "Upper middle income"
   },
   {
-    "name": "Egypt, Arab Rep.",
+    "country": "Egypt, Arab Rep.",
     "income_group": "Lower middle income"
   },
   {
-    "name": "El Salvador",
+    "country": "El Salvador",
     "income_group": "Upper middle income"
   },
   {
-    "name": "Equatorial Guinea",
+    "country": "Equatorial Guinea",
     "income_group": "Upper middle income"
   },
   {
-    "name": "Eritrea",
+    "country": "Eritrea",
     "income_group": "Low income"
   },
   {
-    "name": "Estonia",
+    "country": "Estonia",
     "income_group": "High income"
   },
   {
-    "name": "Eswatini",
+    "country": "Eswatini",
     "income_group": "Lower middle income"
   },
   {
-    "name": "Ethiopia",
+    "country": "Ethiopia",
     "income_group": "Low income"
   },
   {
-    "name": "Euro area",
+    "country": "Euro area",
     "income_group": ""
   },
   {
-    "name": "Europe & Central Asia",
+    "country": "Europe & Central Asia",
     "income_group": ""
   },
   {
-    "name": "Europe & Central Asia (excluding high income)",
+    "country": "Europe & Central Asia (excluding high income)",
     "income_group": ""
   },
   {
-    "name": "Europe & Central Asia (IDA & IBRD)",
+    "country": "Europe & Central Asia (IDA & IBRD)",
     "income_group": ""
   },
   {
-    "name": "European Union",
+    "country": "European Union",
     "income_group": ""
   },
   {
-    "name": "Faroe Islands",
+    "country": "Faroe Islands",
     "income_group": "High income"
   },
   {
-    "name": "Fiji",
+    "country": "Fiji",
     "income_group": "Upper middle income"
   },
   {
-    "name": "Finland",
+    "country": "Finland",
     "income_group": "High income"
   },
   {
-    "name": "Fragile and conflict affected situations",
+    "country": "Fragile and conflict affected situations",
     "income_group": ""
   },
   {
-    "name": "France",
+    "country": "France",
     "income_group": "High income"
   },
   {
-    "name": "French Polynesia",
+    "country": "French Polynesia",
     "income_group": "High income"
   },
   {
-    "name": "Gabon",
+    "country": "Gabon",
     "income_group": "Upper middle income"
   },
   {
-    "name": "Gambia, The",
+    "country": "Gambia, The",
     "income_group": "Low income"
   },
   {
-    "name": "Georgia",
+    "country": "Georgia",
     "income_group": "Upper middle income"
   },
   {
-    "name": "Germany",
+    "country": "Germany",
     "income_group": "High income"
   },
   {
-    "name": "Ghana",
+    "country": "Ghana",
     "income_group": "Lower middle income"
   },
   {
-    "name": "Gibraltar",
+    "country": "Gibraltar",
     "income_group": "High income"
   },
   {
-    "name": "Greece",
+    "country": "Greece",
     "income_group": "High income"
   },
   {
-    "name": "Greenland",
+    "country": "Greenland",
     "income_group": "High income"
   },
   {
-    "name": "Grenada",
+    "country": "Grenada",
     "income_group": "Upper middle income"
   },
   {
-    "name": "Guam",
+    "country": "Guam",
     "income_group": "High income"
   },
   {
-    "name": "Guatemala",
+    "country": "Guatemala",
     "income_group": "Upper middle income"
   },
   {
-    "name": "Guinea",
+    "country": "Guinea",
     "income_group": "Lower middle income"
   },
   {
-    "name": "Guinea-Bissau",
+    "country": "Guinea-Bissau",
     "income_group": "Low income"
   },
   {
-    "name": "Guyana",
+    "country": "Guyana",
     "income_group": "High income"
   },
   {
-    "name": "Haiti",
+    "country": "Haiti",
     "income_group": "Lower middle income"
   },
   {
-    "name": "Heavily indebted poor countries (HIPC)",
+    "country": "Heavily indebted poor countries (HIPC)",
     "income_group": ""
   },
   {
-    "name": "High income",
+    "country": "High income",
     "income_group": ""
   },
   {
-    "name": "Honduras",
+    "country": "Honduras",
     "income_group": "Lower middle income"
   },
   {
-    "name": "Hong Kong SAR, China",
+    "country": "Hong Kong SAR, China",
     "income_group": "High income"
   },
   {
-    "name": "Hungary",
+    "country": "Hungary",
     "income_group": "High income"
   },
   {
-    "name": "IBRD only",
+    "country": "IBRD only",
     "income_group": ""
   },
   {
-    "name": "Iceland",
+    "country": "Iceland",
     "income_group": "High income"
   },
   {
-    "name": "IDA & IBRD total",
+    "country": "IDA & IBRD total",
     "income_group": ""
   },
   {
-    "name": "IDA blend",
+    "country": "IDA blend",
     "income_group": ""
   },
   {
-    "name": "IDA only",
+    "country": "IDA only",
     "income_group": ""
   },
   {
-    "name": "IDA total",
+    "country": "IDA total",
     "income_group": ""
   },
   {
-    "name": "India",
+    "country": "India",
     "income_group": "Lower middle income"
   },
   {
-    "name": "Indonesia",
+    "country": "Indonesia",
     "income_group": "Upper middle income"
   },
   {
-    "name": "Iran, Islamic Rep.",
+    "country": "Iran, Islamic Rep.",
     "income_group": "Upper middle income"
   },
   {
-    "name": "Iraq",
+    "country": "Iraq",
     "income_group": "Upper middle income"
   },
   {
-    "name": "Ireland",
+    "country": "Ireland",
     "income_group": "High income"
   },
   {
-    "name": "Isle of Man",
+    "country": "Isle of Man",
     "income_group": "High income"
   },
   {
-    "name": "Israel",
+    "country": "Israel",
     "income_group": "High income"
   },
   {
-    "name": "Italy",
+    "country": "Italy",
     "income_group": "High income"
   },
   {
-    "name": "Jamaica",
+    "country": "Jamaica",
     "income_group": "Upper middle income"
   },
   {
-    "name": "Japan",
+    "country": "Japan",
     "income_group": "High income"
   },
   {
-    "name": "Jordan",
+    "country": "Jordan",
     "income_group": "Lower middle income"
   },
   {
-    "name": "Kazakhstan",
+    "country": "Kazakhstan",
     "income_group": "Upper middle income"
   },
   {
-    "name": "Kenya",
+    "country": "Kenya",
     "income_group": "Lower middle income"
   },
   {
-    "name": "Kiribati",
+    "country": "Kiribati",
     "income_group": "Lower middle income"
   },
   {
-    "name": "Korea, Dem. People's Rep.",
+    "country": "Korea, Dem. People's Rep.",
     "income_group": "Low income"
   },
   {
-    "name": "Korea, Rep.",
+    "country": "Korea, Rep.",
     "income_group": "High income"
   },
   {
-    "name": "Kosovo",
+    "country": "Kosovo",
     "income_group": "Upper middle income"
   },
   {
-    "name": "Kuwait",
+    "country": "Kuwait",
     "income_group": "High income"
   },
   {
-    "name": "Kyrgyz Republic",
+    "country": "Kyrgyz Republic",
     "income_group": "Lower middle income"
   },
   {
-    "name": "Lao PDR",
+    "country": "Lao PDR",
     "income_group": "Lower middle income"
   },
   {
-    "name": "Late-demographic dividend",
+    "country": "Late-demographic dividend",
     "income_group": ""
   },
   {
-    "name": "Latin America & Caribbean",
+    "country": "Latin America & Caribbean",
     "income_group": ""
   },
   {
-    "name": "Latin America & Caribbean (excluding high income)",
+    "country": "Latin America & Caribbean (excluding high income)",
     "income_group": ""
   },
   {
-    "name": "Latin America & Caribbean (IDA & IBRD)",
+    "country": "Latin America & Caribbean (IDA & IBRD)",
     "income_group": ""
   },
   {
-    "name": "Latvia",
+    "country": "Latvia",
     "income_group": "High income"
   },
   {
-    "name": "Least developed countries: UN classification",
+    "country": "Least developed countries: UN classification",
     "income_group": ""
   },
   {
-    "name": "Lebanon",
+    "country": "Lebanon",
     "income_group": "Lower middle income"
   },
   {
-    "name": "Lesotho",
+    "country": "Lesotho",
     "income_group": "Lower middle income"
   },
   {
-    "name": "Liberia",
+    "country": "Liberia",
     "income_group": "Low income"
   },
   {
-    "name": "Libya",
+    "country": "Libya",
     "income_group": "Upper middle income"
   },
   {
-    "name": "Liechtenstein",
+    "country": "Liechtenstein",
     "income_group": "High income"
   },
   {
-    "name": "Lithuania",
+    "country": "Lithuania",
     "income_group": "High income"
   },
   {
-    "name": "Low & middle income",
+    "country": "Low & middle income",
     "income_group": ""
   },
   {
-    "name": "Low income",
+    "country": "Low income",
     "income_group": ""
   },
   {
-    "name": "Lower middle income",
+    "country": "Lower middle income",
     "income_group": ""
   },
   {
-    "name": "Luxembourg",
+    "country": "Luxembourg",
     "income_group": "High income"
   },
   {
-    "name": "Macao SAR, China",
+    "country": "Macao SAR, China",
     "income_group": "High income"
   },
   {
-    "name": "Madagascar",
+    "country": "Madagascar",
     "income_group": "Low income"
   },
   {
-    "name": "Malawi",
+    "country": "Malawi",
     "income_group": "Low income"
   },
   {
-    "name": "Malaysia",
+    "country": "Malaysia",
     "income_group": "Upper middle income"
   },
   {
-    "name": "Maldives",
+    "country": "Maldives",
     "income_group": "Upper middle income"
   },
   {
-    "name": "Mali",
+    "country": "Mali",
     "income_group": "Low income"
   },
   {
-    "name": "Malta",
+    "country": "Malta",
     "income_group": "High income"
   },
   {
-    "name": "Marshall Islands",
+    "country": "Marshall Islands",
     "income_group": "Upper middle income"
   },
   {
-    "name": "Mauritania",
+    "country": "Mauritania",
     "income_group": "Lower middle income"
   },
   {
-    "name": "Mauritius",
+    "country": "Mauritius",
     "income_group": "Upper middle income"
   },
   {
-    "name": "Mexico",
+    "country": "Mexico",
     "income_group": "Upper middle income"
   },
   {
-    "name": "Micronesia, Fed. Sts.",
+    "country": "Micronesia, Fed. Sts.",
     "income_group": "Lower middle income"
   },
   {
-    "name": "Middle East & North Africa",
+    "country": "Middle East & North Africa",
     "income_group": ""
   },
   {
-    "name": "Middle East & North Africa (excluding high income)",
+    "country": "Middle East & North Africa (excluding high income)",
     "income_group": ""
   },
   {
-    "name": "Middle East & North Africa (IDA & IBRD)",
+    "country": "Middle East & North Africa (IDA & IBRD)",
     "income_group": ""
   },
   {
-    "name": "Middle income",
+    "country": "Middle income",
     "income_group": ""
   },
   {
-    "name": "Moldova",
+    "country": "Moldova",
     "income_group": "Upper middle income"
   },
   {
-    "name": "Monaco",
+    "country": "Monaco",
     "income_group": "High income"
   },
   {
-    "name": "Mongolia",
+    "country": "Mongolia",
     "income_group": "Upper middle income"
   },
   {
-    "name": "Montenegro",
+    "country": "Montenegro",
     "income_group": "Upper middle income"
   },
   {
-    "name": "Morocco",
+    "country": "Morocco",
     "income_group": "Lower middle income"
   },
   {
-    "name": "Mozambique",
+    "country": "Mozambique",
     "income_group": "Low income"
   },
   {
-    "name": "Myanmar",
+    "country": "Myanmar",
     "income_group": "Lower middle income"
   },
   {
-    "name": "Namibia",
+    "country": "Namibia",
     "income_group": "Upper middle income"
   },
   {
-    "name": "Nauru",
+    "country": "Nauru",
     "income_group": "High income"
   },
   {
-    "name": "Nepal",
+    "country": "Nepal",
     "income_group": "Lower middle income"
   },
   {
-    "name": "Netherlands",
+    "country": "Netherlands",
     "income_group": "High income"
   },
   {
-    "name": "New Caledonia",
+    "country": "New Caledonia",
     "income_group": "High income"
   },
   {
-    "name": "New Zealand",
+    "country": "New Zealand",
     "income_group": "High income"
   },
   {
-    "name": "Nicaragua",
+    "country": "Nicaragua",
     "income_group": "Lower middle income"
   },
   {
-    "name": "Niger",
+    "country": "Niger",
     "income_group": "Low income"
   },
   {
-    "name": "Nigeria",
+    "country": "Nigeria",
     "income_group": "Lower middle income"
   },
   {
-    "name": "North America",
+    "country": "North America",
     "income_group": ""
   },
   {
-    "name": "North Macedonia",
+    "country": "North Macedonia",
     "income_group": "Upper middle income"
   },
   {
-    "name": "Northern Mariana Islands",
+    "country": "Northern Mariana Islands",
     "income_group": "High income"
   },
   {
-    "name": "Norway",
+    "country": "Norway",
     "income_group": "High income"
   },
   {
-    "name": "OECD members",
+    "country": "OECD members",
     "income_group": ""
   },
   {
-    "name": "Oman",
+    "country": "Oman",
     "income_group": "High income"
   },
   {
-    "name": "Other small states",
+    "country": "Other small states",
     "income_group": ""
   },
   {
-    "name": "Pacific island small states",
+    "country": "Pacific island small states",
     "income_group": ""
   },
   {
-    "name": "Pakistan",
+    "country": "Pakistan",
     "income_group": "Lower middle income"
   },
   {
-    "name": "Palau",
+    "country": "Palau",
     "income_group": "High income"
   },
   {
-    "name": "Panama",
+    "country": "Panama",
     "income_group": "High income"
   },
   {
-    "name": "Papua New Guinea",
+    "country": "Papua New Guinea",
     "income_group": "Lower middle income"
   },
   {
-    "name": "Paraguay",
+    "country": "Paraguay",
     "income_group": "Upper middle income"
   },
   {
-    "name": "Peru",
+    "country": "Peru",
     "income_group": "Upper middle income"
   },
   {
-    "name": "Philippines",
+    "country": "Philippines",
     "income_group": "Lower middle income"
   },
   {
-    "name": "Poland",
+    "country": "Poland",
     "income_group": "High income"
   },
   {
-    "name": "Portugal",
+    "country": "Portugal",
     "income_group": "High income"
   },
   {
-    "name": "Post-demographic dividend",
+    "country": "Post-demographic dividend",
     "income_group": ""
   },
   {
-    "name": "Pre-demographic dividend",
+    "country": "Pre-demographic dividend",
     "income_group": ""
   },
   {
-    "name": "Puerto Rico",
+    "country": "Puerto Rico",
     "income_group": "High income"
   },
   {
-    "name": "Qatar",
+    "country": "Qatar",
     "income_group": "High income"
   },
   {
-    "name": "Romania",
+    "country": "Romania",
     "income_group": "High income"
   },
   {
-    "name": "Russian Federation",
+    "country": "Russia",
     "income_group": "High income"
   },
   {
-    "name": "Rwanda",
+    "country": "Rwanda",
     "income_group": "Low income"
   },
   {
-    "name": "Samoa",
+    "country": "Samoa",
     "income_group": "Lower middle income"
   },
   {
-    "name": "San Marino",
+    "country": "San Marino",
     "income_group": "High income"
   },
   {
-    "name": "Saudi Arabia",
+    "country": "Saudi Arabia",
     "income_group": "High income"
   },
   {
-    "name": "Senegal",
+    "country": "Senegal",
     "income_group": "Lower middle income"
   },
   {
-    "name": "Serbia",
+    "country": "Serbia",
     "income_group": "Upper middle income"
   },
   {
-    "name": "Seychelles",
+    "country": "Seychelles",
     "income_group": "High income"
   },
   {
-    "name": "Sierra Leone",
+    "country": "Sierra Leone",
     "income_group": "Low income"
   },
   {
-    "name": "Singapore",
+    "country": "Singapore",
     "income_group": "High income"
   },
   {
-    "name": "Sint Maarten (Dutch part)",
+    "country": "Sint Maarten (Dutch part)",
     "income_group": "High income"
   },
   {
-    "name": "Slovak Republic",
+    "country": "Slovak Republic",
     "income_group": "High income"
   },
   {
-    "name": "Slovenia",
+    "country": "Slovenia",
     "income_group": "High income"
   },
   {
-    "name": "Small states",
+    "country": "Small states",
     "income_group": ""
   },
   {
-    "name": "Solomon Islands",
+    "country": "Solomon Islands",
     "income_group": "Lower middle income"
   },
   {
-    "name": "Somalia",
+    "country": "Somalia",
     "income_group": "Low income"
   },
   {
-    "name": "South Africa",
+    "country": "South Africa",
     "income_group": "Upper middle income"
   },
   {
-    "name": "South Asia",
+    "country": "South Asia",
     "income_group": ""
   },
   {
-    "name": "South Asia (IDA & IBRD)",
+    "country": "South Asia (IDA & IBRD)",
     "income_group": ""
   },
   {
-    "name": "South Sudan",
+    "country": "South Sudan",
     "income_group": "Low income"
   },
   {
-    "name": "Spain",
+    "country": "Spain",
     "income_group": "High income"
   },
   {
-    "name": "Sri Lanka",
+    "country": "Sri Lanka",
     "income_group": "Lower middle income"
   },
   {
-    "name": "St. Kitts and Nevis",
+    "country": "St. Kitts and Nevis",
     "income_group": "High income"
   },
   {
-    "name": "St. Lucia",
+    "country": "St. Lucia",
     "income_group": "Upper middle income"
   },
   {
-    "name": "St. Martin (French part)",
+    "country": "St. Martin (French part)",
     "income_group": "High income"
   },
   {
-    "name": "St. Vincent and the Grenadines",
+    "country": "St. Vincent and the Grenadines",
     "income_group": "Upper middle income"
   },
   {
-    "name": "Sub-Saharan Africa",
+    "country": "Sub-Saharan Africa",
     "income_group": ""
   },
   {
-    "name": "Sub-Saharan Africa (excluding high income)",
+    "country": "Sub-Saharan Africa (excluding high income)",
     "income_group": ""
   },
   {
-    "name": "Sub-Saharan Africa (IDA & IBRD)",
+    "country": "Sub-Saharan Africa (IDA & IBRD)",
     "income_group": ""
   },
   {
-    "name": "Sudan",
+    "country": "Sudan",
     "income_group": "Low income"
   },
   {
-    "name": "Suriname",
+    "country": "Suriname",
     "income_group": "Upper middle income"
   },
   {
-    "name": "Sweden",
+    "country": "Sweden",
     "income_group": "High income"
   },
   {
-    "name": "Switzerland",
+    "country": "Switzerland",
     "income_group": "High income"
   },
   {
-    "name": "Syrian Arab Republic",
+    "country": "Syrian Arab Republic",
     "income_group": "Low income"
   },
   {
-    "name": "São Tomé and Principe",
+    "country": "São Tomé and Principe",
     "income_group": "Lower middle income"
   },
   {
-    "name": "TableName",
+    "country": "TableName",
     "income_group": "IncomeGroup"
   },
   {
-    "name": "Tajikistan",
+    "country": "Tajikistan",
     "income_group": "Lower middle income"
   },
   {
-    "name": "Tanzania",
+    "country": "Tanzania",
     "income_group": "Lower middle income"
   },
   {
-    "name": "Thailand",
+    "country": "Thailand",
     "income_group": "Upper middle income"
   },
   {
-    "name": "Timor-Leste",
+    "country": "Timor-Leste",
     "income_group": "Lower middle income"
   },
   {
-    "name": "Togo",
+    "country": "Togo",
     "income_group": "Low income"
   },
   {
-    "name": "Tonga",
+    "country": "Tonga",
     "income_group": "Upper middle income"
   },
   {
-    "name": "Trinidad and Tobago",
+    "country": "Trinidad and Tobago",
     "income_group": "High income"
   },
   {
-    "name": "Tunisia",
+    "country": "Tunisia",
     "income_group": "Lower middle income"
   },
   {
-    "name": "Turkmenistan",
+    "country": "Turkmenistan",
     "income_group": "Upper middle income"
   },
   {
-    "name": "Turks and Caicos Islands",
+    "country": "Turks and Caicos Islands",
     "income_group": "High income"
   },
   {
-    "name": "Tuvalu",
+    "country": "Tuvalu",
     "income_group": "Upper middle income"
   },
   {
-    "name": "Türkiye",
+    "country": "Türkiye",
     "income_group": "Upper middle income"
   },
   {
-    "name": "Uganda",
+    "country": "Uganda",
     "income_group": "Low income"
   },
   {
-    "name": "Ukraine",
+    "country": "Ukraine",
     "income_group": "Upper middle income"
   },
   {
-    "name": "United Arab Emirates",
+    "country": "United Arab Emirates",
     "income_group": "High income"
   },
   {
-    "name": "United Kingdom",
+    "country": "United Kingdom",
     "income_group": "High income"
   },
   {
-    "name": "United States",
+    "country": "United States",
     "income_group": "High income"
   },
   {
-    "name": "Upper middle income",
+    "country": "Upper middle income",
     "income_group": ""
   },
   {
-    "name": "Uruguay",
+    "country": "Uruguay",
     "income_group": "High income"
   },
   {
-    "name": "Uzbekistan",
+    "country": "Uzbekistan",
     "income_group": "Lower middle income"
   },
   {
-    "name": "Vanuatu",
+    "country": "Vanuatu",
     "income_group": "Lower middle income"
   },
   {
-    "name": "Venezuela, RB",
+    "country": "Venezuela, RB",
     "income_group": ""
   },
   {
-    "name": "Viet Nam",
+    "country": "Viet Nam",
     "income_group": "Lower middle income"
   },
   {
-    "name": "Virgin Islands (U.S.)",
+    "country": "Virgin Islands (U.S.)",
     "income_group": "High income"
   },
   {
-    "name": "West Bank and Gaza",
+    "country": "West Bank and Gaza",
     "income_group": "Lower middle income"
   },
   {
-    "name": "World",
+    "country": "World",
     "income_group": ""
   },
   {
-    "name": "Yemen, Rep.",
+    "country": "Yemen, Rep.",
     "income_group": "Low income"
   },
   {
-    "name": "Zambia",
+    "country": "Zambia",
     "income_group": "Lower middle income"
   },
   {
-    "name": "Zimbabwe",
+    "country": "Zimbabwe",
     "income_group": "Lower middle income"
   }
 ]

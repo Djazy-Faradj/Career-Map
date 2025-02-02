@@ -12,6 +12,10 @@ class Country {
   String salaryPeriod = 'N/A'; // Will be used to display the salary period of the country
   String currency = 'N/A'; // Will be used to display the currency of the salary displayed
 
+  String incomeGroup = 'N/A'; // Upper - Middle - Lower ?
+  String ppi = 'N/A'; // Purchasing Power Index
+  String unemploymentRate = 'N/A'; // Unemployment rate
+
   String dataConfidence = 'low'; // Indicates how much confidence we have in the data
 
   Country({required this.name, required this.path, medianSalary, salaryPeriod, currency}) {
@@ -28,6 +32,18 @@ class Country {
   }
   void setCurrency(String c) {
     currency = c;
+    _calculateColor();
+  }
+  void setIncomeGroup(String ig) {
+    incomeGroup = ig;
+    _calculateColor();
+  }
+  void setPPI(String p) {
+    ppi = p;
+    _calculateColor();
+  }
+  void setUnemploymentRate(String ur) {
+    unemploymentRate = ur;
     _calculateColor();
   }
 
