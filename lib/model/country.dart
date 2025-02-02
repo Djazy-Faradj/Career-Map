@@ -20,14 +20,12 @@ class Country {
 
   String dataConfidence = 'low'; // Indicates how much confidence we have in the data
 
-  Country({required this.name, required this.path}) {
-    //_calculateColor();
-  }
+  Country({required this.name, required this.path});
 
   Future calculateColor() async {
     FirestoreMethods firestoreMethods = FirestoreMethods();
     int point = 0; // Will be used to calculate the color of the country
-    
+
       // Get Income group, PPI, Unemployment rate
     await firestoreMethods.readDocumentFromFirestore('income_group', name).then((value) {
       if (value != null) {

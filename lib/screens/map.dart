@@ -108,10 +108,51 @@ class _MapState extends State<Map> {
                     onChanged: (val) => updateSearchText(val),
                   ),
                 ),
+                ElevatedButton(onPressed: () async {
+                  firestoreMethods.writeJsonFileToFirestore('./lib/data/gdp.json', 'gdp', 'Entity');
+                }, child: Text('upload gdp')),
                 ElevatedButton(
                   onPressed: () async { 
-                      await firestoreMethods.writeJobSalaryApiDataToFirestore(JobSalaryApi().loadData('canada', 'software engineer'), 'salary_api', 'job_title');
-                    },
+                    bool? isDataValid = await firestoreMethods.salaryDataIsUpToDate(searchText);
+                    if (isDataValid == false) {
+                      int i = 0; // keeps track of how many requests have been made
+                      await firestoreMethods.createJobSalaryApiDataToFirestore(DateTime.now(), 'salary_api', searchText);
+                      for (var country in countries) {
+                        // limit of 5 requests per second...
+                        await firestoreMethods.writeJobSalaryApiDataToFirestore(JobSalaryApi().loadData(country.name, searchText), 'salary_api', 'job_title');
+                        i++;
+                        if (i == 5) {
+                          setState(() {
+                            country.calculateColor();
+                          });
+                          await Future.delayed(Duration(seconds: 6));
+                          i = 0;
+                        }
+                      }
+                    } else if (isDataValid == null){ // No job in search bar, reset colors
+                      for (var country in countries) {
+                        country.color = standard;
+                      }
+                    } 
+                    if (isDataValid != null) {
+                      print('Data up to date! Reading data from database...');
+                      await firestoreMethods.readDocumentFromFirestore('salary_api', searchText).then((value) {
+                        if (value != null) {
+                          for (var country in countries) {
+                            if (value.containsKey(country.name)) {
+                              country.medianSalary = value[country.name]['median_salary'];
+                              country.salaryPeriod = value[country.name]['salary_period'];
+                              country.currency = value[country.name]['salary_currency'];
+                              country.dataConfidence = value[country.name]['confidence'];
+                            }
+                            setState(() {
+                              country.calculateColor();
+                            });
+                          }
+                        }
+                      });
+                    }
+                  },
                   child: Text('Search'),
                 ),
               ],

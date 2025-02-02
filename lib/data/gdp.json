@@ -1,0 +1,1325 @@
+[
+  {
+    "Entity": "Afghanistan",
+    "Code": "AFG",
+    "Year": 2023,
+    "GDP": 1992.4244,
+    "time": 2023
+  },
+  {
+    "Entity": "Albania",
+    "Code": "ALB",
+    "Year": 2023,
+    "GDP": 18244.293,
+    "time": 2023
+  },
+  {
+    "Entity": "Algeria",
+    "Code": "DZA",
+    "Year": 2023,
+    "GDP": 15159.324,
+    "time": 2023
+  },
+  {
+    "Entity": "Andorra",
+    "Code": "AND",
+    "Year": 2023,
+    "GDP": 64631.297,
+    "time": 2023
+  },
+  {
+    "Entity": "Angola",
+    "Code": "AGO",
+    "Year": 2023,
+    "GDP": 7244.893,
+    "time": 2023
+  },
+  {
+    "Entity": "Antigua and Barbuda",
+    "Code": "ATG",
+    "Year": 2023,
+    "GDP": 28967.256,
+    "time": 2023
+  },
+  {
+    "Entity": "Argentina",
+    "Code": "ARG",
+    "Year": 2023,
+    "GDP": 27104.98,
+    "time": 2023
+  },
+  {
+    "Entity": "Armenia",
+    "Code": "ARM",
+    "Year": 2023,
+    "GDP": 19230.19,
+    "time": 2023
+  },
+  {
+    "Entity": "Australia",
+    "Code": "AUS",
+    "Year": 2023,
+    "GDP": 59552.88,
+    "time": 2023
+  },
+  {
+    "Entity": "Austria",
+    "Code": "AUT",
+    "Year": 2023,
+    "GDP": 65015.133,
+    "time": 2023
+  },
+  {
+    "Entity": "Azerbaijan",
+    "Code": "AZE",
+    "Year": 2023,
+    "GDP": 21262.299,
+    "time": 2023
+  },
+  {
+    "Entity": "Bahamas",
+    "Code": "BHS",
+    "Year": 2023,
+    "GDP": 33105.605,
+    "time": 2023
+  },
+  {
+    "Entity": "Bahrain",
+    "Code": "BHR",
+    "Year": 2023,
+    "GDP": 57213.09,
+    "time": 2023
+  },
+  {
+    "Entity": "Bangladesh",
+    "Code": "BGD",
+    "Year": 2023,
+    "GDP": 8242.398,
+    "time": 2023
+  },
+  {
+    "Entity": "Barbados",
+    "Code": "BRB",
+    "Year": 2023,
+    "GDP": 19224.463,
+    "time": 2023
+  },
+  {
+    "Entity": "Belarus",
+    "Code": "BLR",
+    "Year": 2023,
+    "GDP": 27718.322,
+    "time": 2023
+  },
+  {
+    "Entity": "Belgium",
+    "Code": "BEL",
+    "Year": 2023,
+    "GDP": 64185.848,
+    "time": 2023
+  },
+  {
+    "Entity": "Belize",
+    "Code": "BLZ",
+    "Year": 2023,
+    "GDP": 12455.296,
+    "time": 2023
+  },
+  {
+    "Entity": "Benin",
+    "Code": "BEN",
+    "Year": 2023,
+    "GDP": 3721.2246,
+    "time": 2023
+  },
+  {
+    "Entity": "Bhutan",
+    "Code": "",
+    "Year": "",
+    "GDP": 14061.3125,
+    "time": 2022
+  },
+  {
+    "Entity": "Bolivia",
+    "Code": "BOL",
+    "Year": 2023,
+    "GDP": 9843.97,
+    "time": 2023
+  },
+  {
+    "Entity": "Bosnia and Herzegovina",
+    "Code": "BIH",
+    "Year": 2023,
+    "GDP": 20126.38,
+    "time": 2023
+  },
+  {
+    "Entity": "Botswana",
+    "Code": "BWA",
+    "Year": 2023,
+    "GDP": 18846.25,
+    "time": 2023
+  },
+  {
+    "Entity": "Brazil",
+    "Code": "BRA",
+    "Year": 2023,
+    "GDP": 19018.238,
+    "time": 2023
+  },
+  {
+    "Entity": "Brunei",
+    "Code": "BRN",
+    "Year": 2023,
+    "GDP": 76828.4,
+    "time": 2023
+  },
+  {
+    "Entity": "Bulgaria",
+    "Code": "BGR",
+    "Year": 2023,
+    "GDP": 33403.375,
+    "time": 2023
+  },
+  {
+    "Entity": "Burkina Faso",
+    "Code": "BFA",
+    "Year": 2023,
+    "GDP": 2482.0723,
+    "time": 2023
+  },
+  {
+    "Entity": "Burundi",
+    "Code": "BDI",
+    "Year": 2023,
+    "GDP": 828.8611,
+    "time": 2023
+  },
+  {
+    "Entity": "Cambodia",
+    "Code": "KHM",
+    "Year": 2023,
+    "GDP": 6690.5894,
+    "time": 2023
+  },
+  {
+    "Entity": "Cameroon",
+    "Code": "CMR",
+    "Year": 2023,
+    "GDP": 4870.571,
+    "time": 2023
+  },
+  {
+    "Entity": "Canada",
+    "Code": "CAN",
+    "Year": 2023,
+    "GDP": 55918.93,
+    "time": 2023
+  },
+  {
+    "Entity": "Cape Verde",
+    "Code": "CPV",
+    "Year": 2023,
+    "GDP": 9288.402,
+    "time": 2023
+  },
+  {
+    "Entity": "Central African Republic",
+    "Code": "CAF",
+    "Year": 2023,
+    "GDP": 1135.1362,
+    "time": 2023
+  },
+  {
+    "Entity": "Chad",
+    "Code": "TCD",
+    "Year": 2023,
+    "GDP": 1679.4615,
+    "time": 2023
+  },
+  {
+    "Entity": "Chile",
+    "Code": "CHL",
+    "Year": 2023,
+    "GDP": 29462.64,
+    "time": 2023
+  },
+  {
+    "Entity": "China",
+    "Code": "CHN",
+    "Year": 2023,
+    "GDP": 22137.6,
+    "time": 2023
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 2023,
+    "GDP": 18692.385,
+    "time": 2023
+  },
+  {
+    "Entity": "Comoros",
+    "Code": "COM",
+    "Year": 2023,
+    "GDP": 3498.8032,
+    "time": 2023
+  },
+  {
+    "Entity": "Congo",
+    "Code": "COG",
+    "Year": 2023,
+    "GDP": 6172.2876,
+    "time": 2023
+  },
+  {
+    "Entity": "Costa Rica",
+    "Code": "CRI",
+    "Year": 2023,
+    "GDP": 26292.771,
+    "time": 2023
+  },
+  {
+    "Entity": "Cote d'Ivoire",
+    "Code": "CIV",
+    "Year": 2023,
+    "GDP": 6485.316,
+    "time": 2023
+  },
+  {
+    "Entity": "Croatia",
+    "Code": "HRV",
+    "Year": 2023,
+    "GDP": 41116.87,
+    "time": 2023
+  },
+  {
+    "Entity": "Cyprus",
+    "Code": "CYP",
+    "Year": 2023,
+    "GDP": 53420.684,
+    "time": 2023
+  },
+  {
+    "Entity": "Czechia",
+    "Code": "CZE",
+    "Year": 2023,
+    "GDP": 49681.06,
+    "time": 2023
+  },
+  {
+    "Entity": "Democratic Republic of Congo",
+    "Code": "COD",
+    "Year": 2023,
+    "GDP": 1455.8356,
+    "time": 2023
+  },
+  {
+    "Entity": "Denmark",
+    "Code": "DNK",
+    "Year": 2023,
+    "GDP": 72097.305,
+    "time": 2023
+  },
+  {
+    "Entity": "Djibouti",
+    "Code": "DJI",
+    "Year": 2023,
+    "GDP": 6400.62,
+    "time": 2023
+  },
+  {
+    "Entity": "Dominica",
+    "Code": "DMA",
+    "Year": 2023,
+    "GDP": 17420.252,
+    "time": 2023
+  },
+  {
+    "Entity": "Dominican Republic",
+    "Code": "DOM",
+    "Year": 2023,
+    "GDP": 23087.934,
+    "time": 2023
+  },
+  {
+    "Entity": "East Timor",
+    "Code": "TLS",
+    "Year": 2023,
+    "GDP": 4328.508,
+    "time": 2023
+  },
+  {
+    "Entity": "Ecuador",
+    "Code": "ECU",
+    "Year": 2023,
+    "GDP": 14472.316,
+    "time": 2023
+  },
+  {
+    "Entity": "Egypt",
+    "Code": "EGY",
+    "Year": 2023,
+    "GDP": 16691.133,
+    "time": 2023
+  },
+  {
+    "Entity": "El Salvador",
+    "Code": "SLV",
+    "Year": 2023,
+    "GDP": 11404.334,
+    "time": 2023
+  },
+  {
+    "Entity": "Equatorial Guinea",
+    "Code": "GNQ",
+    "Year": 2023,
+    "GDP": 15688.238,
+    "time": 2023
+  },
+  {
+    "Entity": "Estonia",
+    "Code": "EST",
+    "Year": 2023,
+    "GDP": 42471.824,
+    "time": 2023
+  },
+  {
+    "Entity": "Eswatini",
+    "Code": "SWZ",
+    "Year": 2023,
+    "GDP": 10132.1875,
+    "time": 2023
+  },
+  {
+    "Entity": "Ethiopia",
+    "Code": "ETH",
+    "Year": 2023,
+    "GDP": 2755.457,
+    "time": 2023
+  },
+  {
+    "Entity": "Fiji",
+    "Code": "FJI",
+    "Year": 2023,
+    "GDP": 13652.491,
+    "time": 2023
+  },
+  {
+    "Entity": "Finland",
+    "Code": "FIN",
+    "Year": 2023,
+    "GDP": 57063.523,
+    "time": 2023
+  },
+  {
+    "Entity": "France",
+    "Code": "FRA",
+    "Year": 2023,
+    "GDP": 55441.188,
+    "time": 2023
+  },
+  {
+    "Entity": "Gabon",
+    "Code": "GAB",
+    "Year": 2023,
+    "GDP": 18702.691,
+    "time": 2023
+  },
+  {
+    "Entity": "Gambia",
+    "Code": "GMB",
+    "Year": 2023,
+    "GDP": 2932.2805,
+    "time": 2023
+  },
+  {
+    "Entity": "Georgia",
+    "Code": "GEO",
+    "Year": 2023,
+    "GDP": 22590.53,
+    "time": 2023
+  },
+  {
+    "Entity": "Germany",
+    "Code": "DEU",
+    "Year": 2023,
+    "GDP": 63578.14,
+    "time": 2023
+  },
+  {
+    "Entity": "Ghana",
+    "Code": "GHA",
+    "Year": 2023,
+    "GDP": 6796.4736,
+    "time": 2023
+  },
+  {
+    "Entity": "Greece",
+    "Code": "GRC",
+    "Year": 2023,
+    "GDP": 36905.453,
+    "time": 2023
+  },
+  {
+    "Entity": "Greenland",
+    "Code": "",
+    "Year": "",
+    "GDP": 68086.46,
+    "time": 2021
+  },
+  {
+    "Entity": "Grenada",
+    "Code": "GRD",
+    "Year": 2023,
+    "GDP": 16946.473,
+    "time": 2023
+  },
+  {
+    "Entity": "Guatemala",
+    "Code": "GTM",
+    "Year": 2023,
+    "GDP": 12389.386,
+    "time": 2023
+  },
+  {
+    "Entity": "Guinea",
+    "Code": "GIN",
+    "Year": 2023,
+    "GDP": 3949.34,
+    "time": 2023
+  },
+  {
+    "Entity": "Guinea-Bissau",
+    "Code": "GNB",
+    "Year": 2023,
+    "GDP": 2578.8044,
+    "time": 2023
+  },
+  {
+    "Entity": "Guyana",
+    "Code": "GUY",
+    "Year": 2023,
+    "GDP": 49315.16,
+    "time": 2023
+  },
+  {
+    "Entity": "Haiti",
+    "Code": "HTI",
+    "Year": 2023,
+    "GDP": 2956.4622,
+    "time": 2023
+  },
+  {
+    "Entity": "Honduras",
+    "Code": "HND",
+    "Year": 2023,
+    "GDP": 6468.302,
+    "time": 2023
+  },
+  {
+    "Entity": "Hungary",
+    "Code": "HUN",
+    "Year": 2023,
+    "GDP": 40543.992,
+    "time": 2023
+  },
+  {
+    "Entity": "Iceland",
+    "Code": "ISL",
+    "Year": 2023,
+    "GDP": 67255.67,
+    "time": 2023
+  },
+  {
+    "Entity": "India",
+    "Code": "IND",
+    "Year": 2023,
+    "GDP": 9160.063,
+    "time": 2023
+  },
+  {
+    "Entity": "Indonesia",
+    "Code": "IDN",
+    "Year": 2023,
+    "GDP": 13889.883,
+    "time": 2023
+  },
+  {
+    "Entity": "Iran",
+    "Code": "IRN",
+    "Year": 2023,
+    "GDP": 15912.03,
+    "time": 2023
+  },
+  {
+    "Entity": "Iraq",
+    "Code": "IRQ",
+    "Year": 2023,
+    "GDP": 12711.062,
+    "time": 2023
+  },
+  {
+    "Entity": "Ireland",
+    "Code": "IRL",
+    "Year": 2023,
+    "GDP": 114922.39,
+    "time": 2023
+  },
+  {
+    "Entity": "Israel",
+    "Code": "ISR",
+    "Year": 2023,
+    "GDP": 48432.11,
+    "time": 2023
+  },
+  {
+    "Entity": "Italy",
+    "Code": "ITA",
+    "Year": 2023,
+    "GDP": 53312.07,
+    "time": 2023
+  },
+  {
+    "Entity": "Jamaica",
+    "Code": "JAM",
+    "Year": 2023,
+    "GDP": 10291.3125,
+    "time": 2023
+  },
+  {
+    "Entity": "Japan",
+    "Code": "JPN",
+    "Year": 2023,
+    "GDP": 46157.637,
+    "time": 2023
+  },
+  {
+    "Entity": "Jordan",
+    "Code": "JOR",
+    "Year": 2023,
+    "GDP": 9362.588,
+    "time": 2023
+  },
+  {
+    "Entity": "Kazakhstan",
+    "Code": "KAZ",
+    "Year": 2023,
+    "GDP": 34703.234,
+    "time": 2023
+  },
+  {
+    "Entity": "Kenya",
+    "Code": "KEN",
+    "Year": 2023,
+    "GDP": 5682.9893,
+    "time": 2023
+  },
+  {
+    "Entity": "Kiribati",
+    "Code": "KIR",
+    "Year": 2023,
+    "GDP": 3195.8704,
+    "time": 2023
+  },
+  {
+    "Entity": "Kosovo",
+    "Code": "OWID_KOS",
+    "Year": 2023,
+    "GDP": 13642.677,
+    "time": 2023
+  },
+  {
+    "Entity": "Kuwait",
+    "Code": "KWT",
+    "Year": 2023,
+    "GDP": 46458.2,
+    "time": 2023
+  },
+  {
+    "Entity": "Kyrgyzstan",
+    "Code": "KGZ",
+    "Year": 2023,
+    "GDP": 6403.143,
+    "time": 2023
+  },
+  {
+    "Entity": "Laos",
+    "Code": "LAO",
+    "Year": 2023,
+    "GDP": 8372.156,
+    "time": 2023
+  },
+  {
+    "Entity": "Latvia",
+    "Code": "LVA",
+    "Year": 2023,
+    "GDP": 37007.367,
+    "time": 2023
+  },
+  {
+    "Entity": "Lebanon",
+    "Code": "",
+    "Year": "",
+    "GDP": 11474.751,
+    "time": 2022
+  },
+  {
+    "Entity": "Lesotho",
+    "Code": "LSO",
+    "Year": 2023,
+    "GDP": 2595.8296,
+    "time": 2023
+  },
+  {
+    "Entity": "Liberia",
+    "Code": "LBR",
+    "Year": 2023,
+    "GDP": 1616.9237,
+    "time": 2023
+  },
+  {
+    "Entity": "Libya",
+    "Code": "LBY",
+    "Year": 2023,
+    "GDP": 12478.144,
+    "time": 2023
+  },
+  {
+    "Entity": "Lithuania",
+    "Code": "LTU",
+    "Year": 2023,
+    "GDP": 46740.41,
+    "time": 2023
+  },
+  {
+    "Entity": "Luxembourg",
+    "Code": "LUX",
+    "Year": 2023,
+    "GDP": 132846.58,
+    "time": 2023
+  },
+  {
+    "Entity": "Madagascar",
+    "Code": "MDG",
+    "Year": 2023,
+    "GDP": 1643.3093,
+    "time": 2023
+  },
+  {
+    "Entity": "Malawi",
+    "Code": "MWI",
+    "Year": 2023,
+    "GDP": 1648.4365,
+    "time": 2023
+  },
+  {
+    "Entity": "Malaysia",
+    "Code": "MYS",
+    "Year": 2023,
+    "GDP": 32812.3,
+    "time": 2023
+  },
+  {
+    "Entity": "Maldives",
+    "Code": "MDV",
+    "Year": 2023,
+    "GDP": 22286.98,
+    "time": 2023
+  },
+  {
+    "Entity": "Mali",
+    "Code": "MLI",
+    "Year": 2023,
+    "GDP": 2394.672,
+    "time": 2023
+  },
+  {
+    "Entity": "Malta",
+    "Code": "MLT",
+    "Year": 2023,
+    "GDP": 61125.71,
+    "time": 2023
+  },
+  {
+    "Entity": "Marshall Islands",
+    "Code": "MHL",
+    "Year": 2023,
+    "GDP": 6786.696,
+    "time": 2023
+  },
+  {
+    "Entity": "Mauritania",
+    "Code": "MRT",
+    "Year": 2023,
+    "GDP": 6258.711,
+    "time": 2023
+  },
+  {
+    "Entity": "Mauritius",
+    "Code": "MUS",
+    "Year": 2023,
+    "GDP": 26590.424,
+    "time": 2023
+  },
+  {
+    "Entity": "Mexico",
+    "Code": "MEX",
+    "Year": 2023,
+    "GDP": 22142.607,
+    "time": 2023
+  },
+  {
+    "Entity": "Micronesia (country)",
+    "Code": "FSM",
+    "Year": 2023,
+    "GDP": 3886.6965,
+    "time": 2023
+  },
+  {
+    "Entity": "Moldova",
+    "Code": "MDA",
+    "Year": 2023,
+    "GDP": 15855.273,
+    "time": 2023
+  },
+  {
+    "Entity": "Mongolia",
+    "Code": "MNG",
+    "Year": 2023,
+    "GDP": 16222.864,
+    "time": 2023
+  },
+  {
+    "Entity": "Montenegro",
+    "Code": "MNE",
+    "Year": 2023,
+    "GDP": 27869.65,
+    "time": 2023
+  },
+  {
+    "Entity": "Morocco",
+    "Code": "MAR",
+    "Year": 2023,
+    "GDP": 8868.712,
+    "time": 2023
+  },
+  {
+    "Entity": "Mozambique",
+    "Code": "MOZ",
+    "Year": 2023,
+    "GDP": 1511.6365,
+    "time": 2023
+  },
+  {
+    "Entity": "Myanmar",
+    "Code": "MMR",
+    "Year": 2023,
+    "GDP": 5364.138,
+    "time": 2023
+  },
+  {
+    "Entity": "Namibia",
+    "Code": "NAM",
+    "Year": 2023,
+    "GDP": 10105.515,
+    "time": 2023
+  },
+  {
+    "Entity": "Nauru",
+    "Code": "NRU",
+    "Year": 2023,
+    "GDP": 12462.841,
+    "time": 2023
+  },
+  {
+    "Entity": "Nepal",
+    "Code": "NPL",
+    "Year": 2023,
+    "GDP": 4859.8003,
+    "time": 2023
+  },
+  {
+    "Entity": "Netherlands",
+    "Code": "NLD",
+    "Year": 2023,
+    "GDP": 71446.695,
+    "time": 2023
+  },
+  {
+    "Entity": "New Zealand",
+    "Code": "NZL",
+    "Year": 2023,
+    "GDP": 48826.574,
+    "time": 2023
+  },
+  {
+    "Entity": "Nicaragua",
+    "Code": "NIC",
+    "Year": 2023,
+    "GDP": 7486.943,
+    "time": 2023
+  },
+  {
+    "Entity": "Niger",
+    "Code": "NER",
+    "Year": 2023,
+    "GDP": 1703.397,
+    "time": 2023
+  },
+  {
+    "Entity": "Nigeria",
+    "Code": "NGA",
+    "Year": 2023,
+    "GDP": 5593.0566,
+    "time": 2023
+  },
+  {
+    "Entity": "North Macedonia",
+    "Code": "MKD",
+    "Year": 2023,
+    "GDP": 23584.564,
+    "time": 2023
+  },
+  {
+    "Entity": "Norway",
+    "Code": "NOR",
+    "Year": 2023,
+    "GDP": 90469.81,
+    "time": 2023
+  },
+  {
+    "Entity": "Oman",
+    "Code": "OMN",
+    "Year": 2023,
+    "GDP": 38311.418,
+    "time": 2023
+  },
+  {
+    "Entity": "Pakistan",
+    "Code": "PAK",
+    "Year": 2023,
+    "GDP": 5439.1875,
+    "time": 2023
+  },
+  {
+    "Entity": "Palau",
+    "Code": "PLW",
+    "Year": 2023,
+    "GDP": 15796.54,
+    "time": 2023
+  },
+  {
+    "Entity": "Palestine",
+    "Code": "PSE",
+    "Year": 2023,
+    "GDP": 5313.098,
+    "time": 2023
+  },
+  {
+    "Entity": "Panama",
+    "Code": "PAN",
+    "Year": 2023,
+    "GDP": 35863.88,
+    "time": 2023
+  },
+  {
+    "Entity": "Papua New Guinea",
+    "Code": "PNG",
+    "Year": 2023,
+    "GDP": 4174.4414,
+    "time": 2023
+  },
+  {
+    "Entity": "Paraguay",
+    "Code": "PRY",
+    "Year": 2023,
+    "GDP": 15783.115,
+    "time": 2023
+  },
+  {
+    "Entity": "Peru",
+    "Code": "PER",
+    "Year": 2023,
+    "GDP": 15294.257,
+    "time": 2023
+  },
+  {
+    "Entity": "Philippines",
+    "Code": "PHL",
+    "Year": 2023,
+    "GDP": 9901.057,
+    "time": 2023
+  },
+  {
+    "Entity": "Poland",
+    "Code": "POL",
+    "Year": 2023,
+    "GDP": 44384.168,
+    "time": 2023
+  },
+  {
+    "Entity": "Portugal",
+    "Code": "PRT",
+    "Year": 2023,
+    "GDP": 41755.48,
+    "time": 2023
+  },
+  {
+    "Entity": "Puerto Rico",
+    "Code": "PRI",
+    "Year": 2023,
+    "GDP": 42994.785,
+    "time": 2023
+  },
+  {
+    "Entity": "Qatar",
+    "Code": "QAT",
+    "Year": 2023,
+    "GDP": 116159.14,
+    "time": 2023
+  },
+  {
+    "Entity": "Romania",
+    "Code": "ROU",
+    "Year": 2023,
+    "GDP": 40665.527,
+    "time": 2023
+  },
+  {
+    "Entity": "Russia",
+    "Code": "RUS",
+    "Year": 2023,
+    "GDP": 39753.457,
+    "time": 2023
+  },
+  {
+    "Entity": "Rwanda",
+    "Code": "RWA",
+    "Year": 2023,
+    "GDP": 3060.029,
+    "time": 2023
+  },
+  {
+    "Entity": "Saint Kitts and Nevis",
+    "Code": "KNA",
+    "Year": 2023,
+    "GDP": 30409.404,
+    "time": 2023
+  },
+  {
+    "Entity": "Saint Lucia",
+    "Code": "LCA",
+    "Year": 2023,
+    "GDP": 23403.46,
+    "time": 2023
+  },
+  {
+    "Entity": "Saint Vincent and the Grenadines",
+    "Code": "VCT",
+    "Year": 2023,
+    "GDP": 18335.213,
+    "time": 2023
+  },
+  {
+    "Entity": "Samoa",
+    "Code": "WSM",
+    "Year": 2023,
+    "GDP": 6304.346,
+    "time": 2023
+  },
+  {
+    "Entity": "San Marino",
+    "Code": "",
+    "Year": "",
+    "GDP": 70887.57,
+    "time": 2022
+  },
+  {
+    "Entity": "Sao Tome and Principe",
+    "Code": "STP",
+    "Year": 2023,
+    "GDP": 5541.302,
+    "time": 2023
+  },
+  {
+    "Entity": "Saudi Arabia",
+    "Code": "SAU",
+    "Year": 2023,
+    "GDP": 55055.4,
+    "time": 2023
+  },
+  {
+    "Entity": "Senegal",
+    "Code": "SEN",
+    "Year": 2023,
+    "GDP": 4317.2266,
+    "time": 2023
+  },
+  {
+    "Entity": "Serbia",
+    "Code": "SRB",
+    "Year": 2023,
+    "GDP": 26030.021,
+    "time": 2023
+  },
+  {
+    "Entity": "Seychelles",
+    "Code": "SYC",
+    "Year": 2023,
+    "GDP": 29468.951,
+    "time": 2023
+  },
+  {
+    "Entity": "Sierra Leone",
+    "Code": "SLE",
+    "Year": 2023,
+    "GDP": 3034.219,
+    "time": 2023
+  },
+  {
+    "Entity": "Singapore",
+    "Code": "SGP",
+    "Year": 2023,
+    "GDP": 127543.555,
+    "time": 2023
+  },
+  {
+    "Entity": "Slovakia",
+    "Code": "SVK",
+    "Year": 2023,
+    "GDP": 39290.434,
+    "time": 2023
+  },
+  {
+    "Entity": "Slovenia",
+    "Code": "SVN",
+    "Year": 2023,
+    "GDP": 48243.94,
+    "time": 2023
+  },
+  {
+    "Entity": "Solomon Islands",
+    "Code": "SLB",
+    "Year": 2023,
+    "GDP": 2534.0276,
+    "time": 2023
+  },
+  {
+    "Entity": "Somalia",
+    "Code": "SOM",
+    "Year": 2023,
+    "GDP": 1402.47,
+    "time": 2023
+  },
+  {
+    "Entity": "South Africa",
+    "Code": "ZAF",
+    "Year": 2023,
+    "GDP": 13690.39,
+    "time": 2023
+  },
+  {
+    "Entity": "South Korea",
+    "Code": "KOR",
+    "Year": 2023,
+    "GDP": 50572.25,
+    "time": 2023
+  },
+  {
+    "Entity": "Spain",
+    "Code": "ESP",
+    "Year": 2023,
+    "GDP": 47141.543,
+    "time": 2023
+  },
+  {
+    "Entity": "Sri Lanka",
+    "Code": "LKA",
+    "Year": 2023,
+    "GDP": 13029.524,
+    "time": 2023
+  },
+  {
+    "Entity": "Sudan",
+    "Code": "SDN",
+    "Year": 2023,
+    "GDP": 2469.1946,
+    "time": 2023
+  },
+  {
+    "Entity": "Suriname",
+    "Code": "SUR",
+    "Year": 2023,
+    "GDP": 19043.705,
+    "time": 2023
+  },
+  {
+    "Entity": "Sweden",
+    "Code": "SWE",
+    "Year": 2023,
+    "GDP": 63114.68,
+    "time": 2023
+  },
+  {
+    "Entity": "Switzerland",
+    "Code": "CHE",
+    "Year": 2023,
+    "GDP": 82557.55,
+    "time": 2023
+  },
+  {
+    "Entity": "Syria",
+    "Code": "",
+    "Year": "",
+    "GDP": 4454.8535,
+    "time": 2022
+  },
+  {
+    "Entity": "Tajikistan",
+    "Code": "TJK",
+    "Year": 2023,
+    "GDP": 4472.324,
+    "time": 2023
+  },
+  {
+    "Entity": "Tanzania",
+    "Code": "TZA",
+    "Year": 2023,
+    "GDP": 3620.7935,
+    "time": 2023
+  },
+  {
+    "Entity": "Thailand",
+    "Code": "THA",
+    "Year": 2023,
+    "GDP": 21142.664,
+    "time": 2023
+  },
+  {
+    "Entity": "Togo",
+    "Code": "TGO",
+    "Year": 2023,
+    "GDP": 2767.5166,
+    "time": 2023
+  },
+  {
+    "Entity": "Tonga",
+    "Code": "",
+    "Year": "",
+    "GDP": 6901.739,
+    "time": 2022
+  },
+  {
+    "Entity": "Trinidad and Tobago",
+    "Code": "TTO",
+    "Year": 2023,
+    "GDP": 31705.834,
+    "time": 2023
+  },
+  {
+    "Entity": "Tunisia",
+    "Code": "TUN",
+    "Year": 2023,
+    "GDP": 12552.986,
+    "time": 2023
+  },
+  {
+    "Entity": "Turkey",
+    "Code": "TUR",
+    "Year": 2023,
+    "GDP": 34609.914,
+    "time": 2023
+  },
+  {
+    "Entity": "Turkmenistan",
+    "Code": "TKM",
+    "Year": 2023,
+    "GDP": 17866.404,
+    "time": 2023
+  },
+  {
+    "Entity": "Tuvalu",
+    "Code": "TUV",
+    "Year": 2023,
+    "GDP": 5812.393,
+    "time": 2023
+  },
+  {
+    "Entity": "Uganda",
+    "Code": "UGA",
+    "Year": 2023,
+    "GDP": 2791.0557,
+    "time": 2023
+  },
+  {
+    "Entity": "Ukraine",
+    "Code": "UKR",
+    "Year": 2023,
+    "GDP": 15885.226,
+    "time": 2023
+  },
+  {
+    "Entity": "United Arab Emirates",
+    "Code": "ARE",
+    "Year": 2023,
+    "GDP": 68577.54,
+    "time": 2023
+  },
+  {
+    "Entity": "United Kingdom",
+    "Code": "GBR",
+    "Year": 2023,
+    "GDP": 54542.016,
+    "time": 2023
+  },
+  {
+    "Entity": "United States",
+    "Code": "USA",
+    "Year": 2023,
+    "GDP": 74577.51,
+    "time": 2023
+  },
+  {
+    "Entity": "Uruguay",
+    "Code": "URY",
+    "Year": 2023,
+    "GDP": 31019.31,
+    "time": 2023
+  },
+  {
+    "Entity": "Uzbekistan",
+    "Code": "UZB",
+    "Year": 2023,
+    "GDP": 10007.686,
+    "time": 2023
+  },
+  {
+    "Entity": "Vanuatu",
+    "Code": "VUT",
+    "Year": 2023,
+    "GDP": 3118.396,
+    "time": 2023
+  },
+  {
+    "Entity": "Vietnam",
+    "Code": "VNM",
+    "Year": 2023,
+    "GDP": 13491.88,
+    "time": 2023
+  },
+  {
+    "Entity": "Zambia",
+    "Code": "ZMB",
+    "Year": 2023,
+    "GDP": 3673.4841,
+    "time": 2023
+  },
+  {
+    "Entity": "Zimbabwe",
+    "Code": "ZWE",
+    "Year": 2023,
+    "GDP": 3442.2512,
+    "time": 2023
+  }
+]

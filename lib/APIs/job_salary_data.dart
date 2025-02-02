@@ -11,6 +11,7 @@ class JobSalaryApi {
     'https://job-salary-data.p.rapidapi.com/job-salary?job_title=${jobTitle}&location=${country}&location_type=COUNTRY&years_of_experience=ALL';
 
     try {
+      print('CALLING JOB SALARY API');
       final response = await http.get(
         Uri.parse(url),
         headers: {
@@ -22,15 +23,17 @@ class JobSalaryApi {
       if (response.statusCode == 200) {
         var data = jsonDecode(response.body);
         if (data['data'].isEmpty) { // Returns false if no information is found
-          return false;
+          return null;
         } else {
           return data['data'][0]; // Return the data
         }
       } else {
-        throw Exception('Failed to load data (Status code: ${response.statusCode})');
+        print('Failed to load data (Status code: ${response.statusCode})');
+        return null;
       }
     } catch (e) {
       print('Error: $e');
+      return null;
     }
   }
 }

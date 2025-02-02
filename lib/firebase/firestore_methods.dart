@@ -47,10 +47,26 @@ class FirestoreMethods {
 }
 
  // Method to write Job Salary API JSON data to Firestore from API response
+  Future<void> createJobSalaryApiDataToFirestore(
+    DateTime now, 
+    String nameOfCollection, 
+    String nameOfDocument
+) async {
+  try {
+        final CollectionReference collectionRef = _firestore.collection(nameOfCollection);
+        await collectionRef.doc(nameOfDocument).set({
+          'last-modified': now.toUtc(),
+        });
+  } catch (e) {
+    print('Error creating document for: $nameOfDocument');
+  }
+}
+
+ // Method to write Job Salary API JSON data to Firestore from API response
   Future<void> writeJobSalaryApiDataToFirestore(
-  Future<dynamic> apiDataFuture, 
-  String nameOfCollection, 
-  String namingAttribute,
+    Future<dynamic> apiDataFuture, 
+    String nameOfCollection, 
+    String namingAttribute,
 ) async {
   try {
     // Await the API response
@@ -58,7 +74,7 @@ class FirestoreMethods {
     
     if (apiData != false) {
       final CollectionReference collectionRef = _firestore.collection(nameOfCollection);
-      await collectionRef.doc(apiData[namingAttribute]).set({
+      await collectionRef.doc(apiData[namingAttribute]).update({
         '${apiData['location']}': 
           {
             'median_salary': apiData['median_salary'],
@@ -67,7 +83,6 @@ class FirestoreMethods {
             'confidence': apiData['confidence'],
           }
         });
-      await collectionRef.doc(apiData[namingAttribute]).update({'last-modified': DateTime.now().toUtc()});
       print('Data written for ${apiData[namingAttribute]}');
     } else {
       print('Unexpected data format. Expected a JSON object.');
@@ -103,6 +118,33 @@ class FirestoreMethods {
     }
 
     print('All data written to Firestore successfully!');
+  }
+
+  Future<bool?> salaryDataIsUpToDate(String jobTitle) async {
+    String documentId = jobTitle;
+    if (documentId.isNotEmpty) {
+        try {
+        // Reference to the specific document in the collection
+        final DocumentSnapshot documentSnapshot = await _firestore.collection('salary_api').doc(documentId).get();
+
+        // Check if the document exists
+        if (documentSnapshot.exists) {
+          DateTime lastModified = documentSnapshot.get('last-modified').toDate();
+          DateTime lastValidDate = lastModified.add(Duration(days: 180)); // Last valid date is approximately 6 months after last update
+          bool isValid = DateTime.now().toUtc().isBefore(lastValidDate);
+          return isValid;
+        } else {
+          print('Document $documentId does not exist in collection salary_api');
+          return false; // Need to call api
+        }
+      } catch (e) {
+        print('Error reading document $documentId from collection salary_api: $e');
+        return false;
+      }
+    } else {
+      print('Document ID is empty');
+      return null;
+    }
   }
 
     // Method to read a specific document from a specific collection
