@@ -20,8 +20,35 @@ class FirestoreMethods {
     }
   }
 
+  // Method to write JSON data to Firestore from API response
+  Future<void> writeApiDataToFirestore(
+  Future<dynamic> apiDataFuture, 
+  String nameOfCollection, 
+  String namingAttribute,
+) async {
+  try {
+    // Await the API response
+    final dynamic apiData = await apiDataFuture;
+
+    if (apiData is Map<String, dynamic>) {
+      // Process as a single JSON object
+      final CollectionReference collectionRef = _firestore.collection(nameOfCollection);
+      for (var item in apiData.entries) {
+        await collectionRef.doc(item.value['code']).set({'value': item.value['value']});
+        await collectionRef.doc(item.value['code']).update({'last-modified': DateTime.now().toUtc()});
+      }
+      print('Data written for ${apiData[namingAttribute]}');
+    } else {
+      print('Unexpected data format. Expected a JSON object.');
+    }
+  } catch (e) {
+    print('Error processing API data: $e');
+  }
+}
+
+
   // Method to write JSON data to Firestore
-  Future<void> writeJsonToFirestore(String filePath, String nameOfCollection, String namingAttribute) async {
+  Future<void> writeJsonFileToFirestore(String filePath, String nameOfCollection, String namingAttribute) async {
     // Read JSON data from the file
     final List<Map<String, dynamic>> jsonData = await _readJsonFromFile(filePath);
 
@@ -47,17 +74,23 @@ class FirestoreMethods {
     print('All data written to Firestore successfully!');
   }
 
-  // Optional: Method to read data from Firestore (for verification)
-  Future<void> readDataFromFirestore(String nameOfCollection) async {
-    final CollectionReference countriesCollection = _firestore.collection(nameOfCollection);
-
+    // Method to read a specific document from a specific collection
+  Future<Map<String, dynamic>?> readDocumentFromFirestore(String collectionName, String documentId) async {
     try {
-      final QuerySnapshot snapshot = await countriesCollection.get();
-      for (final doc in snapshot.docs) {
-        print('${doc.id} => ${doc.data()}');
+      // Reference to the specific document in the collection
+      final DocumentSnapshot documentSnapshot = await _firestore.collection(collectionName).doc(documentId).get();
+
+      // Check if the document exists
+      if (documentSnapshot.exists) {
+        // Return the document data as a Map
+        return documentSnapshot.data() as Map<String, dynamic>?;
+      } else {
+        print('Document $documentId does not exist in collection $collectionName');
+        return null;
       }
     } catch (e) {
-      print('Error reading data: $e');
+      print('Error reading document $documentId from collection $collectionName: $e');
+      return null;
     }
   }
 }

@@ -1,3 +1,4 @@
+import 'package:career_map/firebase/firestore_methods.dart';
 import 'package:flutter/material.dart';
 import 'package:career_map/constant.dart';
 
@@ -8,59 +9,107 @@ class Country {
   // Dark-grey by default
   Color color = standard; // Will be used to color the country on the map based on job compatibility
 
-  String medianSalary = 'N/A'; // Will be used to display the median salary of the country
+  double medianSalary = 0.0; // Will be used to display the median salary of the country
+  double convertedMedianSalary = 0.0; // Will be used to display the median salary of the country in USD
   String salaryPeriod = 'N/A'; // Will be used to display the salary period of the country
   String currency = 'N/A'; // Will be used to display the currency of the salary displayed
 
   String incomeGroup = 'N/A'; // Upper - Middle - Lower ?
-  String ppi = 'N/A'; // Purchasing Power Index
-  String unemploymentRate = 'N/A'; // Unemployment rate
+  double ppi = 0.0; // Purchasing Power Index
+  double unemploymentRate = 0.0; // Unemployment rate
 
   String dataConfidence = 'low'; // Indicates how much confidence we have in the data
 
-  Country({required this.name, required this.path, medianSalary, salaryPeriod, currency}) {
-    _calculateColor();
+  Country({required this.name, required this.path}) {
+    //_calculateColor();
   }
 
-  void setMedianSalary(String ms) {
+  void setMedianSalary(double ms) {
     medianSalary = ms;
-    _calculateColor();
+    calculateColor();
   }
   void setSalaryPeriod(String sp) {
     salaryPeriod = sp;
-    _calculateColor();
+    calculateColor();
   }
   void setCurrency(String c) {
     currency = c;
-    _calculateColor();
+    calculateColor();
+  }
+  void setConfidence(String c) {
+    dataConfidence = c;
   }
   void setIncomeGroup(String ig) {
     incomeGroup = ig;
-    _calculateColor();
+    calculateColor();
   }
-  void setPPI(String p) {
+  void setPPI(double p) {
     ppi = p;
-    _calculateColor();
+    calculateColor();
   }
-  void setUnemploymentRate(String ur) {
+  void setUnemploymentRate(double ur) {
     unemploymentRate = ur;
-    _calculateColor();
+    calculateColor();
   }
 
-  void _calculateColor() {
-    if (medianSalary == 'N/A') {
-      color = unknown;
-    } else {
-      double salary = double.parse(medianSalary);
-      if (salary < 20000) {
-        color = red;
-      } else if (salary < 60000) {
-        color = yellow;
-      } else if (salary < 80000) {
-        color = green;
-      } else {
-        color = standard;
+  Future calculateColor() async {
+    FirestoreMethods firestoreMethods = FirestoreMethods();
+    int point = 0; // Will be used to calculate the color of the country
+
+    
+    firestoreMethods.readDocumentFromFirestore('ppi', name).then((value) {
+      if (value != null) {
+        ppi = value['purchasing_power'];
       }
+    });
+    firestoreMethods.readDocumentFromFirestore('unemployment', name).then((value) {
+      if (value != null) {
+        unemploymentRate = value['unemployment'];
+      }
+    });
+
+    // Convert currency to usd
+    if (currency != 'N/A') { // First make sure a currency is in the country
+      await firestoreMethods.readDocumentFromFirestore('currencies', currency).then((value) {
+        if (value != null) {
+          convertedMedianSalary = medianSalary / value['value'];
+        }
+      });
+    }
+
+    // Get gdp of country (in usd)
+    //firestoreMethods
+
+    // Compute ratio to determine safety of salary
+
+    // Add side points (PPI, Income group, Unemployment rate)
+      // Income group
+    if (incomeGroup == 'Upper middle income' || incomeGroup == 'High income') {
+      point += 2;
+    } else if (incomeGroup == 'Lower middle income') {
+      point += 1;
+    }
+      // PPI
+    if (ppi > 75) 
+    {
+      point += 2;
+    } else if (ppi >= 50) {
+      point += 1;
+    }
+      // Unemployment rate
+    if (unemploymentRate < 4) {
+      point += 2;
+    } else if (unemploymentRate <= 7) {
+      point += 1;
+    }
+
+    // Pick color based on points (1/2/3 - RED, 4/5/6 - YELLOW, 7/9 - GREEN)
+    if (point < 4) {
+      color = red;
+    } else if (point < 7) {
+      color = yellow;
+    } else {
+      color = green;
     }
   }
 

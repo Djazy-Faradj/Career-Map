@@ -110,7 +110,7 @@ class _MapState extends State<Map> {
                 ),
                 ElevatedButton(
                   onPressed: () async { 
-                    print(await JobSalaryApi().loadData('canada', 'software engineer'));},
+                    },
                   child: Text('Search'),
                 ),
               ],
