@@ -1,4 +1,4 @@
-# **Global Exploration Platform for Students**
+# **Career Map - Global Exploration Platform for Students**
 
 ## **Overview**
 This project is a personalized global exploration platform designed to help students and young professionals identify the best destinations for their goals, preferences, and budget. By analyzing key economic, lifestyle, and affordability metrics, the platform provides tailored recommendations to empower users to confidently explore the world.
