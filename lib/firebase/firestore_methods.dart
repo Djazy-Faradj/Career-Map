@@ -63,7 +63,7 @@ class FirestoreMethods {
 }
 
  // Method to write Job Salary API JSON data to Firestore from API response
-  Future<void> writeJobSalaryApiDataToFirestore(
+  Future writeJobSalaryApiDataToFirestore(
     Future<dynamic> apiDataFuture, 
     String nameOfCollection, 
     String namingAttribute,
@@ -92,6 +92,21 @@ class FirestoreMethods {
     print('Error processing API data: $e');
   }
 }
+
+ // Method to write JSON data to Firestore
+  Future<void> writeTest(String nameOfCollection, String nameOfDocument) async {
+
+    // Reference to the Firestore collection
+    final CollectionReference countriesCollection = _firestore.collection(nameOfCollection);
+
+      try {
+        await countriesCollection.doc(nameOfDocument).set({'data': 'test'});
+        await countriesCollection.doc(nameOfDocument).update({'last-modified': DateTime.now().toUtc()});
+        print('Data written for ${nameOfDocument}');
+      } catch (e) {
+        print('Error writing data for ${nameOfDocument} $e');
+      }
+    }
 
   // Method to write JSON data to Firestore
   Future<void> writeJsonFileToFirestore(String filePath, String nameOfCollection, String namingAttribute) async {

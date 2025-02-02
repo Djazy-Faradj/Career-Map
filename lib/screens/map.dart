@@ -114,18 +114,23 @@ class _MapState extends State<Map> {
                       country.color = unknown;
                     }
                     bool? isDataValid = await firestoreMethods.salaryDataIsUpToDate(searchText.toLowerCase().replaceAll(' ', ''));
-                    print('isDataValid?: $isDataValid');
                     if (isDataValid == false) {
                       List<String> names = [];
                       int i = 0; // keeps track of how many requests have been made
                       await firestoreMethods.createJobSalaryApiDataToFirestore(DateTime.now().toUtc(), 'salary_api', searchText.toLowerCase().replaceAll(' ', ''));
                       for (var country in countries) {
+                        var jobSalaryDataFuture = JobSalaryApi().loadData(country.name, searchText); // Get the job salary data
                         if (names.contains(country.name.toLowerCase())) {
                           continue;
                         }
-                        // limit of 5 requests per second...
-                        await firestoreMethods.writeJobSalaryApiDataToFirestore(JobSalaryApi().loadData(country.name, searchText.toLowerCase().replaceAll(' ', '')), 'salary_api', 'job_title');
                         names.add(country.name.toLowerCase());
+                        var jobSalaryData = await jobSalaryDataFuture;
+                        if (jobSalaryData == null) {
+                          continue;
+                        }
+                        // limit of 5 requests per second...
+                        await firestoreMethods.writeJobSalaryApiDataToFirestore(Future.value(jobSalaryData), 'salary_api', 'job_title');
+                        
                         i++;
                         if (i == 5) {
                           await Future.delayed(Duration(seconds: 6));
