@@ -55,7 +55,7 @@ class FirestoreMethods {
   try {
         final CollectionReference collectionRef = _firestore.collection(nameOfCollection);
         await collectionRef.doc(nameOfDocument).set({
-          'last-modified': now.toUtc(),
+          'last-modified': now,
         });
   } catch (e) {
     print('Error creating document for: $nameOfDocument');
@@ -71,10 +71,11 @@ class FirestoreMethods {
   try {
     // Await the API response
     final dynamic apiData = await apiDataFuture;
+    String docId = apiData[namingAttribute].toLowerCase().replaceAll(' ', '');
     
     if (apiData != false) {
       final CollectionReference collectionRef = _firestore.collection(nameOfCollection);
-      await collectionRef.doc(apiData[namingAttribute]).update({
+      await collectionRef.doc(docId).update({
         '${apiData['location']}': 
           {
             'median_salary': apiData['median_salary'],
@@ -83,7 +84,7 @@ class FirestoreMethods {
             'confidence': apiData['confidence'],
           }
         });
-      print('Data written for ${apiData[namingAttribute]}');
+      print('Data written for ${docId}');
     } else {
       print('Unexpected data format. Expected a JSON object.');
     }
@@ -91,7 +92,6 @@ class FirestoreMethods {
     print('Error processing API data: $e');
   }
 }
-
 
   // Method to write JSON data to Firestore
   Future<void> writeJsonFileToFirestore(String filePath, String nameOfCollection, String namingAttribute) async {
@@ -134,7 +134,6 @@ class FirestoreMethods {
           bool isValid = DateTime.now().toUtc().isBefore(lastValidDate);
           return isValid;
         } else {
-          print('Document $documentId does not exist in collection salary_api');
           return false; // Need to call api
         }
       } catch (e) {
@@ -158,7 +157,6 @@ class FirestoreMethods {
         // Return the document data as a Map
         return documentSnapshot.data() as Map<String, dynamic>?;
       } else {
-        print('Document $documentId does not exist in collection $collectionName');
         return null;
       }
     } catch (e) {

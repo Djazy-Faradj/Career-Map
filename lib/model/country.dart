@@ -17,6 +17,7 @@ class Country {
   String incomeGroup = 'N/A'; // Upper - Middle - Lower ?
   double ppi = 0.0; // Purchasing Power Index
   double unemploymentRate = 0.0; // Unemployment rate
+  double gdp = 0.0; // Gross Domestic Product
 
   String dataConfidence = 'low'; // Indicates how much confidence we have in the data
 
@@ -26,7 +27,7 @@ class Country {
     FirestoreMethods firestoreMethods = FirestoreMethods();
     int point = 0; // Will be used to calculate the color of the country
 
-      // Get Income group, PPI, Unemployment rate
+      // Get Income group, PPI, Unemployment rate, GDP
     await firestoreMethods.readDocumentFromFirestore('income_group', name).then((value) {
       if (value != null) {
         incomeGroup = value['income_group'];
@@ -42,6 +43,11 @@ class Country {
         unemploymentRate = value['unemployment'];
       }
     });
+    await firestoreMethods.readDocumentFromFirestore('gdp', name).then((value) {
+      if (value != null) {
+        gdp = value['GDP'];
+      }
+    });
 
     // Convert currency to usd
     if (currency != 'N/A') { // First make sure a currency is in the country
@@ -52,50 +58,50 @@ class Country {
       });
     }
 
-    // Get gdp of country (in usd)
-    //firestoreMethods
-
     // Compute ratio to determine safety of salary
-
+    double salaryToGdpRatio = convertedMedianSalary / gdp;
     // Add main points (Salary, GDP)
-      // Salary
+    if (salaryToGdpRatio > 1.5) {
+      point += 4; // Strong indicator of financial well-being
+    } else if (salaryToGdpRatio >= 0.75) {
+      point += 2; // Moderate financial health
+    } else {
+      point += 1; // Low financial health
+    }
 
-    // Add side points (PPI, Income group, Unemployment rate)
-      // Income group
+// Add side points (PPI, Income group, Unemployment rate)
+    // Income group
     if (incomeGroup == 'Upper middle income' || incomeGroup == 'High income') {
-      point += 2;
+      point += 3; // High correlation with strong economic health
     } else if (incomeGroup == 'Lower middle income') {
-      point += 1;
-    }
-      // PPI
-    if (ppi > 75) 
-    {
-      point += 2;
-    } else if (ppi >= 50) {
-      point += 1;
-    }
-      // Unemployment rate
-    if (unemploymentRate < 4) {
-      point += 2;
-    } else if (unemploymentRate <= 7) {
-      point += 1;
+      point += 1; // Moderate impact
     }
 
-    // Pick color based on points (1/2/3 - RED, 4/5/6 - YELLOW, 7/9 - GREEN)
-    if (point < 4) {
+    // PPI
+    if (ppi > 75) {
+      point += 3; // Indicates high purchasing power
+    } else if (ppi >= 50) {
+      point += 2; // Moderate purchasing power
+    } else {
+      point += 1; // Low purchasing power
+    }
+
+    // Unemployment rate
+    if (unemploymentRate < 4) {
+      point += 3; // Very strong economic indicator
+    } else if (unemploymentRate <= 7) {
+      point += 2; // Moderately good economic indicator
+    } else {
+      point += 1; // Poor economic indicator
+    }
+
+    // Pick color based on points (1-4 RED, 5-8 YELLOW, 9+ GREEN)
+    if (point < 5) {
       color = red;
-    } else if (point < 7) {
+    } else if (point < 9) {
       color = yellow;
     } else {
       color = green;
     }
   }
-
-  // Ill use this if I ever want to make a data base to lower API calls, store JSON data of countries with a last updated date
-  // factory Country.fromJson(Map<String, dynamic> json) { 
-  //   return Country(
-  //     name: json['name'],
-  //     code: json['code'],
-  //   );
-  // }
 }

@@ -84,7 +84,7 @@ class _MapState extends State<Map> {
               spacing: 0,
               children: [
                 SvgPicture.asset(
-                  'assets/logo_svg.svg',
+                  'assets/logo.svg',
                   width: 55,
                 ),
                 SvgPicture.asset(
@@ -108,24 +108,30 @@ class _MapState extends State<Map> {
                     onChanged: (val) => updateSearchText(val),
                   ),
                 ),
-                ElevatedButton(onPressed: () async {
-                  firestoreMethods.writeJsonFileToFirestore('./lib/data/gdp.json', 'gdp', 'Entity');
-                }, child: Text('upload gdp')),
                 ElevatedButton(
                   onPressed: () async { 
-                    bool? isDataValid = await firestoreMethods.salaryDataIsUpToDate(searchText);
+                    for (var country in countries) {
+                      country.color = unknown;
+                    }
+                    bool? isDataValid = await firestoreMethods.salaryDataIsUpToDate(searchText.toLowerCase().replaceAll(' ', ''));
+                    print('isDataValid?: $isDataValid');
                     if (isDataValid == false) {
+                      List<String> names = [];
                       int i = 0; // keeps track of how many requests have been made
-                      await firestoreMethods.createJobSalaryApiDataToFirestore(DateTime.now(), 'salary_api', searchText);
+                      await firestoreMethods.createJobSalaryApiDataToFirestore(DateTime.now().toUtc(), 'salary_api', searchText.toLowerCase().replaceAll(' ', ''));
                       for (var country in countries) {
+                        if (names.contains(country.name.toLowerCase())) {
+                          continue;
+                        }
                         // limit of 5 requests per second...
-                        await firestoreMethods.writeJobSalaryApiDataToFirestore(JobSalaryApi().loadData(country.name, searchText), 'salary_api', 'job_title');
+                        await firestoreMethods.writeJobSalaryApiDataToFirestore(JobSalaryApi().loadData(country.name, searchText.toLowerCase().replaceAll(' ', '')), 'salary_api', 'job_title');
+                        names.add(country.name.toLowerCase());
                         i++;
                         if (i == 5) {
+                          await Future.delayed(Duration(seconds: 6));
                           setState(() {
                             country.calculateColor();
                           });
-                          await Future.delayed(Duration(seconds: 6));
                           i = 0;
                         }
                       }
@@ -135,8 +141,7 @@ class _MapState extends State<Map> {
                       }
                     } 
                     if (isDataValid != null) {
-                      print('Data up to date! Reading data from database...');
-                      await firestoreMethods.readDocumentFromFirestore('salary_api', searchText).then((value) {
+                      await firestoreMethods.readDocumentFromFirestore('salary_api', searchText.toLowerCase().replaceAll(' ', '')).then((value) {
                         if (value != null) {
                           for (var country in countries) {
                             if (value.containsKey(country.name)) {
@@ -180,7 +185,7 @@ class _MapState extends State<Map> {
                   setState(() {
                     selectedCountry = country.name;
                   });
-                  print('Tapped country: ${country.name}');
+                  print('Tapped country: ${country.name}\nMedian salar: ${country.medianSalary}\nSalary period: ${country.salaryPeriod}\nCurrency: ${country.currency}\nIncome group: ${country.incomeGroup}\nPPI: ${country.ppi}\nUnemployment rate: ${country.unemploymentRate}\nGDP: ${country.gdp}\nData confidence: ${country.dataConfidence}');
                   break;
                 }
               }
@@ -200,7 +205,7 @@ class _MapState extends State<Map> {
       ),
       bottomNavigationBar: BottomAppBar(
         height: 45,
-        child: Text('Developed by Djazy Faradj for ConUHacks \'25'),
+        child: Text('CareerMap©2025, Developed by Djazy Faradj for ConUHacks \'25'),
       ),
     );
   }

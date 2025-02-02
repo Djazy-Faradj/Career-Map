@@ -11,25 +11,27 @@ class JobSalaryApi {
     'https://job-salary-data.p.rapidapi.com/job-salary?job_title=${jobTitle}&location=${country}&location_type=COUNTRY&years_of_experience=ALL';
 
     try {
-      print('CALLING JOB SALARY API');
-      final response = await http.get(
-        Uri.parse(url),
-        headers: {
-          'x-rapidapi-key': _API_KEY,
-          'x-rapidapi-host': _API_HOST,
-        },
-      );
+      if (jobTitle != null && jobTitle.isNotEmpty && country != null && country.isNotEmpty) {
+        print('CALLING JOB SALARY API FOR $jobTitle IN $country');
+        final response = await http.get(
+          Uri.parse(url),
+          headers: {
+            'x-rapidapi-key': _API_KEY,
+            'x-rapidapi-host': _API_HOST,
+          },
+        );
 
-      if (response.statusCode == 200) {
-        var data = jsonDecode(response.body);
-        if (data['data'].isEmpty) { // Returns false if no information is found
-          return null;
+        if (response.statusCode == 200) {
+          var data = jsonDecode(response.body);
+          if (data['data'].isEmpty) { // Returns false if no information is found
+            return null;
+          } else {
+            return data['data'][0]; // Return the data
+          }
         } else {
-          return data['data'][0]; // Return the data
+          print('Failed to load data (Status code: ${response.statusCode})');
+          return null;
         }
-      } else {
-        print('Failed to load data (Status code: ${response.statusCode})');
-        return null;
       }
     } catch (e) {
       print('Error: $e');
