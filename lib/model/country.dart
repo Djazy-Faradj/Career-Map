@@ -14,22 +14,24 @@ class Country {
 
   String dataConfidence = 'low'; // Indicates how much confidence we have in the data
 
-  Country({required this.name, required this.path, medianSalary, salaryPeriod, currency});
+  Country({required this.name, required this.path, medianSalary, salaryPeriod, currency}) {
+    _calculateColor();
+  }
 
   void setMedianSalary(String ms) {
     medianSalary = ms;
-    calculateColor();
+    _calculateColor();
   }
   void setSalaryPeriod(String sp) {
     salaryPeriod = sp;
-    calculateColor();
+    _calculateColor();
   }
   void setCurrency(String c) {
     currency = c;
-    calculateColor();
+    _calculateColor();
   }
 
-  void calculateColor() {
+  void _calculateColor() {
     if (medianSalary == 'N/A') {
       color = unknown;
     } else {
