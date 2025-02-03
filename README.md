@@ -1,7 +1,7 @@
-# **Career Map - Global Exploration Platform for Students**
+# **Career Map - Global Job Market Exploration Platform**
 
 ## **Overview**
-This project is a personalized global exploration platform designed to help students and young professionals identify the best destinations for their goals, preferences, and budget. By analyzing key economic, lifestyle, and affordability metrics, the platform provides tailored recommendations to empower users to confidently explore the world.
+This [project](career-map.co) is a personalized global exploration platform designed to help students and young professionals identify the best destinations for their goals, preferences, and budget. By analyzing key economic, lifestyle, and affordability metrics, the platform provides tailored recommendations to empower users to confidently explore the world.
 
 ---
 
@@ -46,6 +46,9 @@ This project is a personalized global exploration platform designed to help stud
 ---
 
 ## **How to Try/Install**
+
+Check-out the website!
+https://career-map.co
 
 1. **Clone the Repository**:
    ```bash
