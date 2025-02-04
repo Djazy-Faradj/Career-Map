@@ -177,7 +177,8 @@ class _MapState extends State<Map> {
           transformationController: _transformationController,
           boundaryMargin: EdgeInsets.symmetric(horizontal:500, vertical: 250),
           minScale: 0.9,
-          maxScale: 5,
+          maxScale: 2.5,
+          scaleFactor: 6000.0,
           child: GestureDetector(
             onTapUp: (details) {
               // Convert the tap position to the coordinate system of the map
