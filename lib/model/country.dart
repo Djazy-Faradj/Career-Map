@@ -112,6 +112,7 @@ class Country {
     }
 
     if (medianSalary == 0.0 || ppi == 0.0 || unemploymentRate == 0.0 || gdp == 0.0) {
+      point = 0;
       color = unknown;
     }
   }
