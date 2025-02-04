@@ -18,6 +18,7 @@ class Country {
   double ppi = 0.0; // Purchasing Power Index
   double unemploymentRate = 0.0; // Unemployment rate
   double gdp = 0.0; // Gross Domestic Product
+  int point = 0; // Will be used to color the country on the map based on job compatibility
 
   String dataConfidence = 'low'; // Indicates how much confidence we have in the data
 
@@ -25,7 +26,6 @@ class Country {
 
   Future calculateColor() async {
     FirestoreMethods firestoreMethods = FirestoreMethods();
-    int point = 0; // Will be used to calculate the color of the country
 
       // Get Income group, PPI, Unemployment rate, GDP
     await firestoreMethods.readDocumentFromFirestore('income_group', name).then((value) {
@@ -49,6 +49,11 @@ class Country {
       }
     });
 
+    // If median salary is given in monthly, convert it to yearly
+    if (salaryPeriod == 'MONTH') {
+      medianSalary *= 12;
+    }
+
     // Convert currency to usd
     if (currency != 'N/A') { // First make sure a currency is in the country
       await firestoreMethods.readDocumentFromFirestore('currencies', currency).then((value) {
@@ -58,15 +63,17 @@ class Country {
       });
     }
 
+    //print('Country: $name\nMedian salary: $medianSalary\nConverted median salary: $convertedMedianSalary\nSalary period: $salaryPeriod\nCurrency: $currency\nIncome group: $incomeGroup\nPPI: $ppi\nUnemployment rate: $unemploymentRate\nGDP: $gdp\nData confidence: $dataConfidence');
+
     // Compute ratio to determine safety of salary
     double salaryToGdpRatio = convertedMedianSalary / gdp;
     // Add main points (Salary, GDP)
     if (salaryToGdpRatio > 1.5) {
-      point += 4; // Strong indicator of financial well-being
+      point += 10; // Strong indicator of financial well-being
     } else if (salaryToGdpRatio >= 0.75) {
-      point += 2; // Moderate financial health
+      point += 5; // Moderate financial health
     } else {
-      point += 1; // Low financial health
+      point += 2; // Low financial health
     }
 
 // Add side points (PPI, Income group, Unemployment rate)
@@ -95,10 +102,10 @@ class Country {
       point += 1; // Poor economic indicator
     }
 
-    // Pick color based on points (1-4 RED, 5-8 YELLOW, 9+ GREEN)
-    if (point < 5) {
+    // Pick color based on points (1-7 RED, 7-14 YELLOW, 14+ GREEN)
+    if (point < 7) {
       color = red;
-    } else if (point < 9) {
+    } else if (point < 14) {
       color = yellow;
     } else {
       color = green;

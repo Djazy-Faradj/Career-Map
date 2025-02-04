@@ -112,6 +112,7 @@ class _MapState extends State<Map> {
                     Set<String> names = {}; 
                     for (var country in countries) {
                       country.color = unknown;
+                      country.point = 0;
                     }
                     bool? isDataValid = await firestoreMethods.salaryDataIsUpToDate(searchText.toLowerCase().replaceAll(' ', ''));
                     if (isDataValid == false) {
@@ -188,7 +189,7 @@ class _MapState extends State<Map> {
                   setState(() {
                     selectedCountry = country.name;
                   });
-                  print('Tapped country: ${country.name}\nMedian salar: ${country.medianSalary}\nSalary period: ${country.salaryPeriod}\nCurrency: ${country.currency}\nIncome group: ${country.incomeGroup}\nPPI: ${country.ppi}\nUnemployment rate: ${country.unemploymentRate}\nGDP: ${country.gdp}\nData confidence: ${country.dataConfidence}');
+                  print('Tapped country: ${country.name}\nMedian salary: ${country.medianSalary}\nSalary period: ${country.salaryPeriod}\nCurrency: ${country.currency}\nIncome group: ${country.incomeGroup}\nPPI: ${country.ppi}\nUnemployment rate: ${country.unemploymentRate}\nGDP: ${country.gdp}\nData confidence: ${country.dataConfidence}\nPoints: ${country.point}\nConverted Salary: ${country.convertedMedianSalary}\$');
                   break;
                 }
               }
