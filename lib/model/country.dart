@@ -110,5 +110,9 @@ class Country {
     } else {
       color = green;
     }
+
+    if (medianSalary == 0.0 || ppi == 0.0 || unemploymentRate == 0.0 || gdp == 0.0) {
+      color = unknown;
+    }
   }
 }
