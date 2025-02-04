@@ -111,55 +111,57 @@ class _MapState extends State<Map> {
                   onPressed: () async {
                     Set<String> names = {}; 
                     for (var country in countries) {
-                      country.color = unknown;
+                      country.color = standard;
                       country.point = 0;
                     }
-                    bool? isDataValid = await firestoreMethods.salaryDataIsUpToDate(searchText.toLowerCase().replaceAll(' ', ''));
-                    if (isDataValid == false) {
-                      int i = 0; // keeps track of how many requests have been made
-                      await firestoreMethods.createJobSalaryApiDataToFirestore(DateTime.now().toUtc(), 'salary_api', searchText.toLowerCase().replaceAll(' ', ''));
-                      for (var country in countries) {
-                        if (!names.add(country.name.toLowerCase().trim())) { // If the country has already been queried to salaryDataApi, skip it
-                          continue;
-                        }
-                        var jobSalaryDataFuture = JobSalaryApi().loadData(country.name, searchText); // Get the job salary data
-                        var jobSalaryData = await jobSalaryDataFuture;
-                        if (jobSalaryData == null) {
-                          continue;
-                        }
-                        // limit of 5 requests per second...
-                        await firestoreMethods.writeJobSalaryApiDataToFirestore(Future.value(jobSalaryData), 'salary_api', 'job_title');
-                        
-                        i++;
-                        if (i == 5) {
-                          await Future.delayed(Duration(seconds: 6));
-                          setState(() {
-                            country.calculateColor();
-                          });
-                          i = 0;
-                        }
-                      }
-                    } else if (isDataValid == null){ // No job in search bar, reset colors
-                      for (var country in countries) {
-                        country.color = standard;
-                      }
-                    } 
-                    if (isDataValid != null) {
-                      await firestoreMethods.readDocumentFromFirestore('salary_api', searchText.toLowerCase().replaceAll(' ', '')).then((value) {
-                        if (value != null) {
-                          for (var country in countries) {
-                            if (value.containsKey(country.name)) {
-                              country.medianSalary = value[country.name]['median_salary'];
-                              country.salaryPeriod = value[country.name]['salary_period'];
-                              country.currency = value[country.name]['salary_currency'];
-                              country.dataConfidence = value[country.name]['confidence'];
-                            }
+                    if (searchableJobTitles.contains(searchText.toLowerCase().replaceAll(' ', ''))) {
+                      bool? isDataValid = await firestoreMethods.salaryDataIsUpToDate(searchText.toLowerCase().replaceAll(' ', ''));
+                      if (isDataValid == false) {
+                        int i = 0; // keeps track of how many requests have been made
+                        await firestoreMethods.createJobSalaryApiDataToFirestore(DateTime.now().toUtc(), 'salary_api', searchText.toLowerCase().replaceAll(' ', ''));
+                        for (var country in countries) {
+                          if (!names.add(country.name.toLowerCase().trim())) { // If the country has already been queried to salaryDataApi, skip it
+                            continue;
+                          }
+                          var jobSalaryDataFuture = JobSalaryApi().loadData(country.name, searchText); // Get the job salary data
+                          var jobSalaryData = await jobSalaryDataFuture;
+                          if (jobSalaryData == null) {
+                            continue;
+                          }
+                          // limit of 5 requests per second...
+                          await firestoreMethods.writeJobSalaryApiDataToFirestore(Future.value(jobSalaryData), 'salary_api', 'job_title');
+                          
+                          i++;
+                          if (i == 5) {
+                            await Future.delayed(Duration(seconds: 6));
                             setState(() {
                               country.calculateColor();
                             });
+                            i = 0;
                           }
                         }
-                      });
+                      } else if (isDataValid == null){ // No job in search bar, reset colors
+                        for (var country in countries) {
+                          country.color = standard;
+                        }
+                      } 
+                      if (isDataValid != null) {
+                        await firestoreMethods.readDocumentFromFirestore('salary_api', searchText.toLowerCase().replaceAll(' ', '')).then((value) {
+                          if (value != null) {
+                            for (var country in countries) {
+                              if (value.containsKey(country.name)) {
+                                country.medianSalary = value[country.name]['median_salary'];
+                                country.salaryPeriod = value[country.name]['salary_period'];
+                                country.currency = value[country.name]['salary_currency'];
+                                country.dataConfidence = value[country.name]['confidence'];
+                              }
+                              setState(() {
+                                country.calculateColor();
+                              });
+                            }
+                          }
+                        });
+                      }
                     }
                   },
                   child: Text('Search'),
