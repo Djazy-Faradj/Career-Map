@@ -2,6 +2,7 @@ import 'package:career_map/APIs/job_salary_data.dart';
 import 'package:career_map/constant.dart';
 import 'package:career_map/firebase/firestore_methods.dart';
 import 'package:career_map/model/country.dart';
+import 'package:career_map/widgets/loading.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -16,6 +17,7 @@ class Map extends StatefulWidget {
 }
 
 class _MapState extends State<Map> {
+  bool loading = false;
   String searchText = '';
   String selectedCountry = '';
   List<Country> countries = [];
@@ -72,6 +74,62 @@ class _MapState extends State<Map> {
     return regions;
   }
 
+  loadData() async {
+    setState(() { loading = true; });
+    Set<String> names = {}; 
+    for (var country in countries) {
+      country.color = standard;
+      country.point = 0;
+    }
+    if (searchableJobTitles.contains(searchText.toLowerCase().replaceAll(' ', ''))) {
+      bool? isDataValid = await firestoreMethods.salaryDataIsUpToDate(searchText.toLowerCase().replaceAll(' ', ''));
+      if (isDataValid == false) {
+        int i = 0; // keeps track of how many requests have been made
+        await firestoreMethods.createJobSalaryApiDataToFirestore(DateTime.now().toUtc(), 'salary_api', searchText.toLowerCase().replaceAll(' ', ''));
+        for (var country in countries) {
+          if (!names.add(country.name.toLowerCase().trim())) { // If the country has already been queried to salaryDataApi, skip it
+            continue;
+          }
+          var jobSalaryDataFuture = JobSalaryApi().loadData(country.name, searchText); // Get the job salary data
+          var jobSalaryData = await jobSalaryDataFuture;
+          if (jobSalaryData == null) {
+            continue;
+          }
+          // limit of 5 requests per second...
+          await firestoreMethods.writeJobSalaryApiDataToFirestore(Future.value(jobSalaryData), 'salary_api', 'job_title');
+          
+          i++;
+          if (i == 5) {
+            await Future.delayed(Duration(seconds: 6));
+            i = 0;
+          }
+        }
+      } else if (isDataValid == null){ // No job in search bar, reset colors
+        for (var country in countries) {
+          country.color = standard;
+        }
+      } 
+      if (isDataValid != null) {
+        await firestoreMethods.readDocumentFromFirestore('salary_api', searchText.toLowerCase().replaceAll(' ', '')).then((value) {
+          if (value != null) {
+            for (var country in countries) {
+              if (value.containsKey(country.name)) {
+                country.medianSalary = value[country.name]['median_salary'];
+                country.salaryPeriod = value[country.name]['salary_period'];
+                country.currency = value[country.name]['salary_currency'];
+                country.dataConfidence = value[country.name]['confidence'];
+              }
+              setState(() {
+                country.calculateColor();
+              });
+            }
+          }
+        });
+      }
+      }
+    setState(() { loading = false; });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -89,81 +147,39 @@ class _MapState extends State<Map> {
                 SvgPicture.asset(
                   'assets/title.svg',
                   height: 150,
-                )
+                ),
               ],
             ),
             Row(
-              spacing: 10,
+              spacing: 15,
               children: [
+                if (loading) Loading(),
                 SizedBox(
                   width: 250,
-                  child: TextField(
-                    decoration: InputDecoration(
-                      hintText: 'Search for a job',
-                      hintStyle: TextStyle(
-                        color: Color.fromARGB(255, 20, 20, 20),
-                      ),
+                  child: DropdownButton<String>(
+                    value: searchText.isNotEmpty ? searchText : null,
+                    hint: Text(
+                      'Select a job',
+                      style: TextStyle(color: Colors.black54),
                     ),
-                    onChanged: (val) => updateSearchText(val),
+                    isExpanded: true,
+                    items: searchableJobTitles.map((String jobTitle) {
+                      return DropdownMenuItem<String>(
+                        value: jobTitle.toLowerCase().replaceAll(' ', ''),
+                        alignment: Alignment.center,
+                        child: Text(jobTitle),
+                      );
+                    }).toList(),
+                    onChanged: (String? newValue) {
+                      setState(() {
+                        searchText = newValue!.toLowerCase().replaceAll(' ', '');
+                      });
+                      print('Selected: $newValue');
+                    },
                   ),
                 ),
                 ElevatedButton(
-                  onPressed: () async {
-                    Set<String> names = {}; 
-                    for (var country in countries) {
-                      country.color = standard;
-                      country.point = 0;
-                    }
-                    if (searchableJobTitles.contains(searchText.toLowerCase().replaceAll(' ', ''))) {
-                      bool? isDataValid = await firestoreMethods.salaryDataIsUpToDate(searchText.toLowerCase().replaceAll(' ', ''));
-                      if (isDataValid == false) {
-                        int i = 0; // keeps track of how many requests have been made
-                        await firestoreMethods.createJobSalaryApiDataToFirestore(DateTime.now().toUtc(), 'salary_api', searchText.toLowerCase().replaceAll(' ', ''));
-                        for (var country in countries) {
-                          if (!names.add(country.name.toLowerCase().trim())) { // If the country has already been queried to salaryDataApi, skip it
-                            continue;
-                          }
-                          var jobSalaryDataFuture = JobSalaryApi().loadData(country.name, searchText); // Get the job salary data
-                          var jobSalaryData = await jobSalaryDataFuture;
-                          if (jobSalaryData == null) {
-                            continue;
-                          }
-                          // limit of 5 requests per second...
-                          await firestoreMethods.writeJobSalaryApiDataToFirestore(Future.value(jobSalaryData), 'salary_api', 'job_title');
-                          
-                          i++;
-                          if (i == 5) {
-                            await Future.delayed(Duration(seconds: 6));
-                            setState(() {
-                              country.calculateColor();
-                            });
-                            i = 0;
-                          }
-                        }
-                      } else if (isDataValid == null){ // No job in search bar, reset colors
-                        for (var country in countries) {
-                          country.color = standard;
-                        }
-                      } 
-                      if (isDataValid != null) {
-                        await firestoreMethods.readDocumentFromFirestore('salary_api', searchText.toLowerCase().replaceAll(' ', '')).then((value) {
-                          if (value != null) {
-                            for (var country in countries) {
-                              if (value.containsKey(country.name)) {
-                                country.medianSalary = value[country.name]['median_salary'];
-                                country.salaryPeriod = value[country.name]['salary_period'];
-                                country.currency = value[country.name]['salary_currency'];
-                                country.dataConfidence = value[country.name]['confidence'];
-                              }
-                              setState(() {
-                                country.calculateColor();
-                              });
-                            }
-                          }
-                        });
-                      }
-                    }
-                  },
+                  onPressed: () async { await loadData(); },
                   child: Text('Search'),
                 ),
               ],
