@@ -81,7 +81,7 @@ class _MapState extends State<Map> {
       country.color = standard;
       country.point = 0;
     }
-    if (searchableJobTitles.contains(searchText.toLowerCase().replaceAll(' ', ''))) {
+    if (searchableJobTitles.contains(searchText)) {
       bool? isDataValid = await firestoreMethods.salaryDataIsUpToDate(searchText.toLowerCase().replaceAll(' ', ''));
       if (isDataValid == false) {
         int i = 0; // keeps track of how many requests have been made
@@ -165,14 +165,14 @@ class _MapState extends State<Map> {
                     isExpanded: true,
                     items: searchableJobTitles.map((String jobTitle) {
                       return DropdownMenuItem<String>(
-                        value: jobTitle.toLowerCase().replaceAll(' ', ''),
+                        value: jobTitle,
                         alignment: Alignment.center,
                         child: Text(jobTitle),
                       );
                     }).toList(),
                     onChanged: (String? newValue) {
                       setState(() {
-                        searchText = newValue!.toLowerCase().replaceAll(' ', '');
+                        searchText = newValue!;
                       });
                       print('Selected: $newValue');
                     },
